@@ -24,12 +24,6 @@
           </h2>
         </div>
       </div>
-      <!-- <div class="google-colors">
-                <h1 id="google-4">4</h1>
-                <h1 id="google-3">3</h1>
-                <h1 id="google-0-1">0</h1>
-                <h1 id="google-0-2">0</h1>
-            </div> -->
       <div class="input-box" onclick="sendFocus()">
         <img src="{{ url_for('static', filename='images/mag.png') }}" />
         <input
@@ -45,6 +39,24 @@
   <script>
     function answerBoxTemplate(title, titleDesc, rating) {
       return `<div class='card'>
+                <h3>Name of Item</h3>
+                <div class='two-col'>
+                    <p class='link'>Shop here</p>
+                    <p class='price'>$##.##</p>
+                </div>
+                <div class='two-col'>
+                    <div class='image-side'>
+                        <img height=180px width=180px src="{{ url_for('static', filename='images/placeholder.png') }}">
+                        <div class='two-col'>
+                            <p class='stars'>☆☆☆☆☆</p> 
+                            <p class='rate-num'>#.#</p>
+                        </div>
+                    </div>
+                    <div class='text-side'>
+                        <p>description here</p>
+                        <p>Reviews: ###</p>
+                    </div>
+                </div>
                 <h3 class='episode-title'>${title}</h3>
                 <p class='episode-desc'>${titleDesc}</p>
                 <p class='episode-rating'>IMDB Rating: ${rating}</p>

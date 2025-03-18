@@ -134,3 +134,53 @@ body {
   background-color: #f5ecdd;
   border: 1px solid black;
 }
+
+h3 {
+  font-size: 20px;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.two-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.two-col p {
+  width: 50%;
+}
+
+.link {
+  color: #378baf;
+  text-decoration: underline;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.price {
+  text-align: right;
+  font-size: 20px;
+}
+
+.image-side {
+  width: 40%;
+}
+
+.text-side {
+  width: 60%;
+}
+
+.stars {
+  font-size: 25px;
+}
+
+.rate-num {
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 15px;
+}
