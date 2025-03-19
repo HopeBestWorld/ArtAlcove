@@ -37,29 +37,36 @@
   </div>
 
   <script>
-    function answerBoxTemplate(title, titleDesc, rating) {
+    function answerBoxTemplate(
+      product,
+      siteurl,
+      price,
+      rating,
+      imgurl,
+      descr,
+      review_title,
+      review_desc
+    ) {
       return `<div class='card'>
-                <h3>Name of Item</h3>
+                <h3>${product}</h3>
                 <div class='two-col'>
-                    <p class='link'>Shop here</p>
-                    <p class='price'>$##.##</p>
+                    <p class='link'><a href="${siteurl}">Shop here</p></a>
+                    <p class='price'>$${price}</p>
                 </div>
                 <div class='two-col'>
                     <div class='image-side'>
                         <img height=180px width=180px src="{{ url_for('static', filename='images/placeholder.png') }}">
                         <div class='two-col'>
                             <p class='stars'>☆☆☆☆☆</p> 
-                            <p class='rate-num'>#.#</p>
+                            <p class='rate-num'>${rating}</p>
                         </div>
                     </div>
                     <div class='text-side'>
                         <p>description here</p>
-                        <p>Reviews: ###</p>
+                        <p>Reviews:</p>
+                        <p>${review_title[0]}: ${review_desc[0]}</p>
                     </div>
                 </div>
-                <h3 class='episode-title'>${title}</h3>
-                <p class='episode-desc'>${titleDesc}</p>
-                <p class='episode-rating'>IMDB Rating: ${rating}</p>
             </div>`;
     }
 
@@ -71,7 +78,7 @@
       document.getElementById("answer-box").innerHTML = "";
       console.log(document.getElementById("filter-text-val").value);
       fetch(
-        "/episodes?" +
+        "/stretched_canvas?" +
           new URLSearchParams({
             title: document.getElementById("filter-text-val").value,
           }).toString()
@@ -81,9 +88,14 @@
           data.forEach((row) => {
             let tempDiv = document.createElement("div");
             tempDiv.innerHTML = answerBoxTemplate(
-              row.title,
+              row.product,
+              row.siteurl,
+              row.price,
+              row.rating,
+              row.imgurl,
               row.descr,
-              row.imdb_rating
+              row.review_title,
+              row.review_desc
             );
             document.getElementById("answer-box").appendChild(tempDiv);
           })
