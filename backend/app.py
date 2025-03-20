@@ -127,7 +127,10 @@ def search_jaccard():
         pd.merge(graphite_df, graphite_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(oil_pastels_df, oil_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(pastel_pencils_df, pastel_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
     ])
 
     # Remove duplicates based on the 'product' column
@@ -171,7 +174,10 @@ def search_cosine():
         pd.merge(graphite_df, graphite_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(oil_pastels_df, oil_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(pastel_pencils_df, pastel_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
     ])
 
     merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True) #reset index
