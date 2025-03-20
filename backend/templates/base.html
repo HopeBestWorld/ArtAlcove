@@ -3,52 +3,49 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
-  rel="stylesheet"
-/>
-<body>
-  <div class="full-body-container">
-    <div class="top-text">
-      <div class="row">
-        <div class="col1">
-          <img
-            src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}"
-          />
-        </div>
-        <div class="col2">
-          <h1>Working on an art project?</h1>
-          <h2>
-            Tell us what you want to create and we'll recommend materials for
-            you!
-          </h2>
-        </div>
-      </div>
-      <div class="input-box" onclick="sendFocus()">
-        <img src="{{ url_for('static', filename='images/mag.png') }}" />
-        <input
-          placeholder="Enter your query here..."
-          id="filter-text-val"
-          onkeyup="filterText()"
-        />
-      </div>
-    </div>
-    <div id="answer-box"></div>
-  </div>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
+    rel="stylesheet" />
 
-  <script>
-    function answerBoxTemplate(
-      product,
-      siteurl,
-      price,
-      rating,
-      imgurl,
-      descr,
-      review_title,
-      review_desc
-    ) {
-      return `<div class='card'>
+<body>
+    <div class="full-body-container">
+        <div class="top-text">
+            <div class="row">
+                <div class="col1">
+                    <img src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}" />
+                </div>
+                <div class="col2">
+                    <h1>Working on an art project?</h1>
+                    <h2>
+                        Tell us what you want to create and we'll recommend materials for
+                        you!
+                    </h2>
+                </div>
+            </div>
+            <div class="input-box" onclick="sendFocus()">
+                <img src="{{ url_for('static', filename='images/mag.png') }}" />
+                <input placeholder="Enter your query here..." id="filter-text-val" onkeyup="handleSearch()" />
+                <button onclick="switchSearch()">Switch Search Type</button>
+            </div>
+        </div>
+        <div id="loading-indicator" style="display: none;">Loading...</div>
+        <div id="answer-box"></div>
+    </div>
+
+    <script>
+        function answerBoxTemplate(
+            product,
+            siteurl,
+            price,
+            rating,
+            imgurl,
+            descr,
+            review_title,
+            review_desc,
+            similarity
+        ) {
+            return `<div class='card'>
                 <h3>${product}</h3>
+                <p>Similarity: ${similarity.toFixed(4)}</p>
                 <div class='two-col'>
                     <p class='link'><a href="${siteurl}">Shop here</p></a>
                     <p class='price'>$${price.toFixed(2)}</p>
@@ -68,50 +65,102 @@
                     </div>
                 </div>
             </div>`;
-    }
+        }
 
-    function getReviews(review_title, review_desc) {
-      let reviewsHTML = "";
-      for (let i = 0; i < review_title.length; i++) {
-        reviewsHTML += `<div class="hover-container reviews">
+        function getReviews(review_title, review_desc) {
+            let reviewsHTML = "";
+            for (let i = 0; i < review_title.length; i++) {
+                reviewsHTML += `<div class="hover-container reviews">
             ${i + 1}. ${review_title[i]} 
             <p style="display: inline" class='link'>(See more...)</p>
             <div class="hover">${review_desc[i]}</div>
             </div>`;
-      }
-      return reviewsHTML;
-    }
+            }
+            return reviewsHTML;
+        }
 
-    function sendFocus() {
-      document.getElementById("filter-text-val").focus();
-    }
+        function sendFocus() {
+            document.getElementById("filter-text-val").focus();
+        }
 
-    function filterText() {
-      document.getElementById("answer-box").innerHTML = "";
-      console.log(document.getElementById("filter-text-val").value);
-      fetch(
-        "/stretched_canvas?" +
-          new URLSearchParams({
-            title: document.getElementById("filter-text-val").value,
-          }).toString()
-      )
-        .then((response) => response.json())
-        .then((data) =>
-          data.forEach((row) => {
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = answerBoxTemplate(
-              row.product,
-              row.siteurl,
-              row.price,
-              row.rating,
-              row.imgurl,
-              row.descr,
-              row.review_title,
-              row.review_desc
-            );
-            document.getElementById("answer-box").appendChild(tempDiv);
-          })
-        );
-    }
-  </script>
+        function filterText() {
+            document.getElementById("answer-box").innerHTML = "";
+            document.getElementById("loading-indicator").style.display = "block"; // Show loading
+
+            fetch(
+                "/search_jaccard?" +
+                new URLSearchParams({
+                    query: document.getElementById("filter-text-val").value,
+                }).toString()
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    data.forEach((row) => {
+                        let tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = answerBoxTemplate(
+                            row.product,
+                            row.siteurl,
+                            row.price,
+                            row.rating,
+                            row.imgurl,
+                            row.descr,
+                            row.review_title,
+                            row.review_desc,
+                            row.similarity
+                        );
+                        document.getElementById("answer-box").appendChild(tempDiv);
+                    });
+                })
+                .finally(() => {
+                    document.getElementById("loading-indicator").style.display = "none"; // Hide loading
+                });
+        }
+
+        function cosineSearch() {
+            document.getElementById("answer-box").innerHTML = "";
+            document.getElementById("loading-indicator").style.display = "block";
+
+            fetch(
+                "/search_cosine?" +
+                new URLSearchParams({
+                    query: document.getElementById("filter-text-val").value,
+                }).toString()
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    data.forEach((row) => {
+                        let tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = answerBoxTemplate(
+                            row.product,
+                            row.siteurl,
+                            row.price,
+                            row.rating,
+                            row.imgurl,
+                            row.descr,
+                            row.review_title,
+                            row.review_desc,
+                            row.similarity
+                        );
+                        document.getElementById("answer-box").appendChild(tempDiv);
+                    });
+                })
+                .finally(() => {
+                    document.getElementById("loading-indicator").style.display = "none";
+                });
+        }
+        let currentSearch = "jaccard"; // Default to Jaccard
+
+        function switchSearch() {
+            currentSearch = currentSearch === "jaccard" ? "cosine" : "jaccard";
+            alert(currentSearch === "jaccard" ? "Jaccard search enabled" : "Cosine search enabled");
+        }
+
+        function handleSearch() {
+            if (currentSearch === "jaccard") {
+                filterText();
+            } else {
+                cosineSearch();
+            }
+        }
+    </script>
 </body>
