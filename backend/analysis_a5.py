@@ -45,29 +45,14 @@ def build_vectorizer(max_features, stop_words, max_df=0.8, min_df=10, norm='l2')
     )
     return tfidf_vectorizer
 
-def get_sim(mov1, mov2, input_doc_mat, input_movie_name_to_index):
-    """Returns a float giving the cosine similarity of 
-       the two movie transcripts.
-    
-    Params: {mov1 (str): Name of the first movie.
-             mov2 (str): Name of the second movie.
-             input_doc_mat (numpy.ndarray): Term-document matrix of movie transcripts, where 
-                    each row represents a document (movie transcript) and each column represents a term.
-             movie_name_to_index (dict): Dictionary that maps movie names to the corresponding row index 
-                    in the term-document matrix.}
-    Returns: Float (Cosine similarity of the two movie transcripts.)
-    """
-    # TODO-5.2
-    idx1 = input_movie_name_to_index[mov1]
-    idx2 = input_movie_name_to_index[mov2]
-    v1 = input_doc_mat[idx1]
-    v2 = input_doc_mat[idx2]
-    
+def get_sim(query_vector, product_vector):
+    """Returns cosine similarity of two vectors."""
+    v1 = query_vector.toarray()[0] #convert to numpy array
+    v2 = product_vector.toarray()[0] #convert to numpy array
     n = np.dot(v1, v2)
     d = LA.norm(v1) * LA.norm(v2)
-    
     if d == 0:
-        return 0.0  
+        return 0.0
     else:
         return n / d
 

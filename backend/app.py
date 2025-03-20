@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 import pandas as pd
-from analysis_a5 import build_vectorizer
+from analysis_a5 import build_vectorizer, get_sim
 import numpy as np
 from numpy import linalg as LA
 from tfidf import query
@@ -86,17 +86,6 @@ def json_search(query):
     }).reset_index()
     matches_filtered_json = matches.to_json(orient='records')
     return matches_filtered_json
-
-def get_sim(query_vector, product_vector):
-    """Returns cosine similarity of two vectors."""
-    v1 = query_vector.toarray()[0] #convert to numpy array
-    v2 = product_vector.toarray()[0] #convert to numpy array
-    n = np.dot(v1, v2)
-    d = LA.norm(v1) * LA.norm(v2)
-    if d == 0:
-        return 0.0
-    else:
-        return n / d
 
 @app.route("/")
 def home():
