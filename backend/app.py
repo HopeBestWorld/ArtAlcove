@@ -4,7 +4,6 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 import pandas as pd
-import re
 from analysis_a5 import build_vectorizer
 import numpy as np
 from numpy import linalg as LA
@@ -88,16 +87,6 @@ def json_search(query):
     matches_filtered_json = matches.to_json(orient='records')
     return matches_filtered_json
 
-def tokenize(text):
-    """Returns a set of words that make up the text."""
-    return set(re.findall(r"\w+", text.lower()))
-
-def calculate_jaccard_similarity(set1, set2):
-    """Calculates the Jaccard similarity between two sets."""
-    intersection = len(set1.intersection(set2))
-    union = len(set1.union(set2))
-    return intersection / union if union else 0
-
 def get_sim(query_vector, product_vector):
     """Returns cosine similarity of two vectors."""
     v1 = query_vector.toarray()[0] #convert to numpy array
@@ -112,53 +101,6 @@ def get_sim(query_vector, product_vector):
 @app.route("/")
 def home():
     return render_template('base.html',title="sample html")
-
-@app.route("/search_jaccard")
-def search_jaccard():
-    query = request.args.get("query")
-    if not query:
-        return json.dumps([])
-
-    merged_df = pd.concat([
-        pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(alcohol_markers_df, alcohol_markers_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(colored_pencils_df, colored_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(drawing_pencils_df, drawing_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(graphite_df, graphite_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(oil_pastels_df, oil_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(pastel_pencils_df, pastel_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
-    ])
-
-    # Remove duplicates based on the 'product' column
-    merged_df = merged_df.drop_duplicates(subset='product')
-
-    query_tokens = tokenize(query)
-    results = []
-
-
-    for index, row in merged_df.iterrows():
-        product_description = row['descr']
-        description_tokens = tokenize(product_description)
-        similarity = calculate_jaccard_similarity(query_tokens, description_tokens)
-        if similarity > 0:  # Adjust threshold as needed
-            results.append({
-                'product': row['product'],
-                'siteurl': row['siteurl'],
-                'price': row['price'],
-                'rating': row['rating'],
-                'imgurl': row['imgurl'],
-                'descr': row['descr'],
-                'review_title': row['review_title'],
-                'review_desc': row['review_desc'],
-                'similarity': similarity
-            })
-
-    results.sort(key=lambda x: x['similarity'], reverse=True)
-    return json.dumps(results)
 
 @app.route("/search_cosine")
 def search_cosine():

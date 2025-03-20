@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>{% block title %}{% endblock %} ArtAlcove</title>
+<title>ArtAlcove</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,16 +15,12 @@
                 </div>
                 <div class="col2">
                     <h1>Working on an art project?</h1>
-                    <h2>
-                        Tell us what you want to create and we'll recommend materials for
-                        you!
-                    </h2>
+                    <h2>Tell us what you want to create and we'll recommend materials for you!</h2>
                 </div>
             </div>
             <div class="input-box" onclick="sendFocus()">
                 <img src="{{ url_for('static', filename='images/mag.png') }}" />
                 <input placeholder="Enter your query here..." id="filter-text-val" onkeyup="handleSearch()" />
-                <button onclick="switchSearch()">Switch Search Type</button>
             </div>
         </div>
         <div id="loading-indicator" style="display: none;">Loading...</div>
@@ -32,17 +28,7 @@
     </div>
 
     <script>
-        function answerBoxTemplate(
-            product,
-            siteurl,
-            price,
-            rating,
-            imgurl,
-            descr,
-            review_title,
-            review_desc,
-            similarity
-        ) {
+        function answerBoxTemplate(product, siteurl, price, rating, imgurl, descr, review_title, review_desc, similarity) {
             return `<div class='card'>
                 <h3>${product}</h3>
                 <p>Similarity: ${similarity.toFixed(4)}</p>
@@ -54,7 +40,7 @@
                     <div class='image-side'>
                         <img height=180px width=180px src="${imgurl}">
                         <div class='two-col'>
-                            <p class='stars'>☆☆☆☆☆</p>
+                            <p class='stars'>☆☆☆☆☆-</p>
                             <p class='rate-num'>${rating}</p>
                         </div>
                     </div>
@@ -83,40 +69,7 @@
             document.getElementById("filter-text-val").focus();
         }
 
-        function filterText() {
-            document.getElementById("answer-box").innerHTML = "";
-            document.getElementById("loading-indicator").style.display = "block"; // Show loading
-
-            fetch(
-                "/search_jaccard?" +
-                new URLSearchParams({
-                    query: document.getElementById("filter-text-val").value,
-                }).toString()
-            )
-                .then((response) => response.json())
-                .then((data) => {
-                    data.forEach((row) => {
-                        let tempDiv = document.createElement("div");
-                        tempDiv.innerHTML = answerBoxTemplate(
-                            row.product,
-                            row.siteurl,
-                            row.price,
-                            row.rating,
-                            row.imgurl,
-                            row.descr,
-                            row.review_title,
-                            row.review_desc,
-                            row.similarity
-                        );
-                        document.getElementById("answer-box").appendChild(tempDiv);
-                    });
-                })
-                .finally(() => {
-                    document.getElementById("loading-indicator").style.display = "none"; // Hide loading
-                });
-        }
-
-        function cosineSearch() {
+        function handleSearch() {
             document.getElementById("answer-box").innerHTML = "";
             document.getElementById("loading-indicator").style.display = "block";
 
@@ -147,20 +100,6 @@
                 .finally(() => {
                     document.getElementById("loading-indicator").style.display = "none";
                 });
-        }
-        let currentSearch = "jaccard"; // Default to Jaccard
-
-        function switchSearch() {
-            currentSearch = currentSearch === "jaccard" ? "cosine" : "jaccard";
-            alert(currentSearch === "jaccard" ? "Jaccard search enabled" : "Cosine search enabled");
-        }
-
-        function handleSearch() {
-            if (currentSearch === "jaccard") {
-                filterText();
-            } else {
-                cosineSearch();
-            }
         }
     </script>
 </body>
