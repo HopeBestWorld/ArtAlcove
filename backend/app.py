@@ -8,6 +8,7 @@ import re
 from analysis_a5 import build_vectorizer
 import numpy as np
 from numpy import linalg as LA
+from tfidf import query
 
 # ROOT_PATH for linking with all your files. 
 # Feel free to use a config.py or settings.py with a global export variable
@@ -38,6 +39,14 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     pastel_pencils_reviews_df = pd.DataFrame(data['pastel_pencils_reviews'])
     soft_pastels_df = pd.DataFrame(data['soft_pastels'])
     soft_pastels_reviews_df = pd.DataFrame(data['soft_pastels_reviews'])
+    acrylics_df = pd.DataFrame(data['acrylics'])
+    acrylics_reviews_df = pd.DataFrame(data['acrylics_reviews'])
+    acrylic_paintbrushes_df = pd.DataFrame(data['acrylic_paintbrushes'])
+    acrylic_paintbrushes_reviews_df = pd.DataFrame(data['acrylic_paintbrushes_reviews'])
+    erasers_df = pd.DataFrame(data['erasers'])
+    erasers_reviews_df = pd.DataFrame(data['erasers_reviews'])
+    calligraphy_df = pd.DataFrame(data['calligraphy'])
+    calligraphy_reviews_df = pd.DataFrame(data['calligraphy_reviews'])
 
 app = Flask(__name__)
 CORS(app)
@@ -60,6 +69,15 @@ def json_search(query):
     merged_df = pd.concat([merged_df, merged_df2])
     merged_df2 = pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    
+    
+    
 
     matches = merged_df.groupby(
         ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
