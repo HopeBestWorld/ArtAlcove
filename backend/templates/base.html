@@ -51,23 +51,35 @@
                 <h3>${product}</h3>
                 <div class='two-col'>
                     <p class='link'><a href="${siteurl}">Shop here</p></a>
-                    <p class='price'>$${price}</p>
+                    <p class='price'>$${price.toFixed(2)}</p>
                 </div>
                 <div class='two-col'>
                     <div class='image-side'>
-                        <img height=180px width=180px src="{{ url_for('static', filename='images/placeholder.png') }}">
+                        <img height=180px width=180px src="${imgurl}">
                         <div class='two-col'>
-                            <p class='stars'>☆☆☆☆☆</p> 
+                            <p class='stars'>☆☆☆☆☆</p>
                             <p class='rate-num'>${rating}</p>
                         </div>
                     </div>
                     <div class='text-side'>
-                        <p>description here</p>
-                        <p>Reviews:</p>
-                        <p>${review_title[0]}: ${review_desc[0]}</p>
+                        <p>${descr}</p>
+                        <p class='review'>Reviews:</p>
+                        <div>${getReviews(review_title, review_desc)}</div>
                     </div>
                 </div>
             </div>`;
+    }
+
+    function getReviews(review_title, review_desc) {
+      let reviewsHTML = "";
+      for (let i = 0; i < review_title.length; i++) {
+        reviewsHTML += `<div class="hover-container reviews">
+            ${i + 1}. ${review_title[i]} 
+            <p style="display: inline" class='link'>(See more...)</p>
+            <div class="hover">${review_desc[i]}</div>
+            </div>`;
+      }
+      return reviewsHTML;
     }
 
     function sendFocus() {

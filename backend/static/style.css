@@ -188,3 +188,40 @@ p {
   padding-top: 5px;
   padding-right: 15px;
 }
+
+.review {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.reviews {
+  color: #aa82a4;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.hover-container {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.hover {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.hover-container:hover .hover {
+  visibility: visible;
+}

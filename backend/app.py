@@ -20,7 +20,8 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
     stretched_canvas_df = pd.DataFrame(data['stretched_canvas'])
     stretched_canvas_reviews_df = pd.DataFrame(data['stretched_canvas_reviews'])
-    
+    alcohol_markers_df = pd.DataFrame(data['alcohol_markers'])
+    alcohol_markers_reviews_df = pd.DataFrame(data['alcohol_markers_reviews'])
 
 app = Flask(__name__)
 CORS(app)
@@ -29,6 +30,8 @@ CORS(app)
 def json_search(query):
     matches = []
     merged_df = pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df2 = pd.merge(alcohol_markers_df, alcohol_markers_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
     matches = merged_df.groupby(
         ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
     ).agg({
