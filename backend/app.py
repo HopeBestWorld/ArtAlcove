@@ -75,8 +75,6 @@ def json_search(query):
     merged_df2 = pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
     
-    
-    
 
     matches = merged_df.groupby(
         ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
@@ -110,6 +108,13 @@ def search_cosine():
         pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
     ])
+
+    merged_df = merged_df.groupby(
+        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
+    ).agg({
+        'review_title': list,
+        'review_desc': list
+    }).reset_index()
 
     merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True) #reset index
 

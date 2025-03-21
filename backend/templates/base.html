@@ -3,34 +3,55 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
-    rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
+  rel="stylesheet"
+/>
 
 <body>
-    <div class="full-body-container">
-        <div id="top-text" class="top-text">
-            <div class="row">
-                <div class="col1">
-                    <img src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}" />
-                </div>
-                <div class="col2">
-                    <h1>Working on an art project?</h1>
-                    <h2>Tell us what you want to create and we'll recommend materials for you!</h2>
-                </div>
-            </div>
-            <div class="input-box" onclick="sendFocus()">
-                <img src="{{ url_for('static', filename='images/mag.png') }}" />
-                <input placeholder="Enter your query here..." id="filter-text-val" onkeyup="handleSearch()" />
-            </div>
+  <div class="full-body-container">
+    <div id="top-text" class="top-text">
+      <div class="row">
+        <div class="col1">
+          <img
+            src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}"
+          />
         </div>
-        <div id="loading-indicator" style="display: none;">Loading...</div>
-        <div id="answer-box"></div>
-    <a href="#top-text" class="scroll-button">^</a>
+        <div class="col2">
+          <h1>Working on an art project?</h1>
+          <h2>
+            Tell us what you want to create and we'll recommend materials for
+            you!
+          </h2>
+        </div>
+      </div>
+      <div class="input-box" onclick="sendFocus()">
+        <img src="{{ url_for('static', filename='images/mag.png') }}" />
+        <input
+          placeholder="Enter your query here..."
+          id="filter-text-val"
+          onkeyup="handleSearch()"
+        />
+      </div>
     </div>
+    <div id="loading-indicator" style="display: none">Loading...</div>
+    <div id="answer-box"></div>
+    <a href="#top-text" class="scroll-button">^</a>
+  </div>
 
-    <script>
-        function answerBoxTemplate(product, siteurl, price, rating, imgurl, descr, review_title, review_desc, similarity) {
-            return `<div class='card'>
+  <script>
+    function answerBoxTemplate(
+      product,
+      siteurl,
+      price,
+      rating,
+      imgurl,
+      descr,
+      review_title,
+      review_desc,
+      similarity
+    ) {
+      return `<div class='card'>
                 <h3>${product}</h3>
                 <p>Similarity: ${similarity.toFixed(4)}</p>
                 <div class='two-col'>
@@ -52,55 +73,55 @@
                     </div>
                 </div>
             </div>`;
-        }
+    }
 
-        function getReviews(review_title, review_desc) {
-            let reviewsHTML = "";
-            for (let i = 0; i < review_title.length; i++) {
-                reviewsHTML += `<div class="hover-container reviews">
+    function getReviews(review_title, review_desc) {
+      let reviewsHTML = "";
+      for (let i = 0; i < review_title.length; i++) {
+        reviewsHTML += `<div class="hover-container reviews">
             ${i + 1}. ${review_title[i]} 
             <p style="display: inline" class='link'>(See more...)</p>
             <div class="hover">${review_desc[i]}</div>
             </div>`;
-            }
-            return reviewsHTML;
-        }
+      }
+      return reviewsHTML;
+    }
 
-        function sendFocus() {
-            document.getElementById("filter-text-val").focus();
-        }
+    function sendFocus() {
+      document.getElementById("filter-text-val").focus();
+    }
 
-        function handleSearch() {
-            document.getElementById("answer-box").innerHTML = "";
-            document.getElementById("loading-indicator").style.display = "block";
+    function handleSearch() {
+      document.getElementById("answer-box").innerHTML = "";
+      document.getElementById("loading-indicator").style.display = "block";
 
-            fetch(
-                "/search_cosine?" +
-                new URLSearchParams({
-                    query: document.getElementById("filter-text-val").value,
-                }).toString()
-            )
-                .then((response) => response.json())
-                .then((data) => {
-                    data.forEach((row) => {
-                        let tempDiv = document.createElement("div");
-                        tempDiv.innerHTML = answerBoxTemplate(
-                            row.product,
-                            row.siteurl,
-                            row.price,
-                            row.rating,
-                            row.imgurl,
-                            row.descr,
-                            row.review_title,
-                            row.review_desc,
-                            row.similarity
-                        );
-                        document.getElementById("answer-box").appendChild(tempDiv);
-                    });
-                })
-                .finally(() => {
-                    document.getElementById("loading-indicator").style.display = "none";
-                });
-        }
-    </script>
+      fetch(
+        "/search_cosine?" +
+          new URLSearchParams({
+            query: document.getElementById("filter-text-val").value,
+          }).toString()
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((row) => {
+            let tempDiv = document.createElement("div");
+            tempDiv.innerHTML = answerBoxTemplate(
+              row.product,
+              row.siteurl,
+              row.price,
+              row.rating,
+              row.imgurl,
+              row.descr,
+              row.review_title,
+              row.review_desc,
+              row.similarity
+            );
+            document.getElementById("answer-box").appendChild(tempDiv);
+          });
+        })
+        .finally(() => {
+          document.getElementById("loading-indicator").style.display = "none";
+        });
+    }
+  </script>
 </body>
