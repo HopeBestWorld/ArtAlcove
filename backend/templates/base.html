@@ -53,7 +53,6 @@
     ) {
       return `<div class='card'>
                 <h3>${product}</h3>
-                <p>Similarity: ${similarity.toFixed(4)}</p>
                 <div class='two-col'>
                     <p class='link'><a href="${siteurl}">Shop here</p></a>
                     <p class='price'>$${price.toFixed(2)}</p>
@@ -62,8 +61,12 @@
                     <div class='image-side'>
                         <img height=180px width=180px src="${imgurl}">
                         <div class='two-col'>
-                            <p class='stars'>☆☆☆☆☆-</p>
+                            <p class='stars'>☆☆☆☆☆</p>
                             <p class='rate-num'>${rating}</p>
+                        </div>
+                        <div class='two-col'>
+                          <p class='similarity'>Similarity:</p>
+                          <p class='num similarity'>${similarity.toFixed(4)}</p>
                         </div>
                     </div>
                     <div class='text-side'>

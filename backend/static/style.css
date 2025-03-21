@@ -134,6 +134,7 @@ body {
   border-radius: 20px;
   background-color: #f5ecdd;
   border: 1px solid black;
+  height: 500px;
 }
 
 h3 {
@@ -186,7 +187,7 @@ p {
 
 .rate-num {
   text-align: right;
-  padding-top: 5px;
+  margin-top: 5px;
   padding-right: 15px;
 }
 
@@ -255,4 +256,11 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+.similarity,
+.num {
+  margin-top: 200px;
+  color: #378baf;
+  font-weight: bold;
 }
