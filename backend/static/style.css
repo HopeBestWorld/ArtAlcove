@@ -226,3 +226,33 @@ p {
 .hover-container:hover .hover {
   visibility: visible;
 }
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #aa82a4;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-button:hover {
+  cursor: arrow;
+  background-color: #8c6886;
+}
+
+.scroll-button:active {
+  background-color: #8c6886;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
