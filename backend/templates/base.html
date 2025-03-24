@@ -30,7 +30,7 @@
         <input
           placeholder="Enter your query here..."
           id="filter-text-val"
-          onkeyup="handleSearch()"
+          onkeyup="if (event.key === 'Enter') handleSearch()"
         />
       </div>
     </div>
@@ -82,7 +82,7 @@
       let reviewsHTML = "";
       for (let i = 0; i < review_title.length; i++) {
         reviewsHTML += `<div class="hover-container reviews">
-            ${i + 1}. ${review_title[i]} 
+            ${i + 1}. ${review_title[i]}
             <p style="display: inline" class='link'>(See more...)</p>
             <div class="hover">${review_desc[i]}</div>
             </div>`;
@@ -106,21 +106,35 @@
       )
         .then((response) => response.json())
         .then((data) => {
-          data.forEach((row) => {
-            let tempDiv = document.createElement("div");
-            tempDiv.innerHTML = answerBoxTemplate(
-              row.product,
-              row.siteurl,
-              row.price,
-              row.rating,
-              row.imgurl,
-              row.descr,
-              row.review_title,
-              row.review_desc,
-              row.similarity
-            );
-            document.getElementById("answer-box").appendChild(tempDiv);
-          });
+          const answerBox = document.getElementById("answer-box");
+          answerBox.innerHTML = "";
+          if (data.length === 0) {
+            answerBox.innerHTML =
+              "<div class='no-match'><h2>No matches found</h2></div>";
+          } else {
+            data.forEach((row) => {
+              let tempDiv = document.createElement("div");
+              tempDiv.innerHTML = answerBoxTemplate(
+                row.product,
+                row.siteurl,
+                row.price,
+                row.rating,
+                row.imgurl,
+                row.descr,
+                row.review_title,
+                row.review_desc,
+                row.similarity
+              );
+              answerBox.appendChild(tempDiv);
+            });
+          }
+          if (answerBox.querySelector(".card")) {
+            answerBox.classList.add("grid");
+            answerBox.classList.remove("no-match");
+          } else {
+            answerBox.classList.remove("grid");
+            answerBox.classList.add("no-match");
+          }
         })
         .finally(() => {
           document.getElementById("loading-indicator").style.display = "none";

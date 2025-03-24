@@ -83,7 +83,7 @@ input::placeholder {
   color: white;
 }
 
-#answer-box {
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 85vw;
@@ -263,4 +263,8 @@ html {
   margin-top: 180px;
   color: #378baf;
   font-weight: bold;
+}
+
+.no-match {
+  text-align: center;
 }
