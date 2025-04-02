@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from flask import Flask, render_template, request
 from flask_cors import CORS
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
@@ -94,6 +95,18 @@ def remove_duplicate_reviews(row):
     else:
         return pd.Series([[], []])
 
+def filter_price(query, results):
+    new_results = results
+    num = re.findall(r'\$\d+\.?\d*|\d+\.?\d*\s*dollars', query)
+    if 'cheap' in query:
+        new_results = [result for result in results if result['price'] <= 20]
+    elif 'expensive' in query:
+        new_results = [result for result in results if result['price'] >= 50]
+    if len(num) > 0:
+        nums = [re.sub(r'^\$| dollars$', '', n) for n in num]
+        new_results = [result for result in results if result['price'] <= int(nums[0])]
+    return new_results
+
 @app.route("/")
 def home():
     return render_template('base.html',title="sample html")
@@ -152,6 +165,7 @@ def search_cosine():
             })
 
     results.sort(key=lambda x: x['similarity'], reverse=True)
+    results = filter_price(query, results)
     return json.dumps(results)
 
 

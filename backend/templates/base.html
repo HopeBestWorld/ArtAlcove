@@ -61,7 +61,7 @@
                     <div class='image-side'>
                         <img height=180px width=180px src="${imgurl}">
                         <div class='two-col'>
-                            <p class='stars'>☆☆☆☆☆</p>
+                            <p class='stars'>${getStars(rating)}</p>
                             <p class='rate-num'>${rating}</p>
                         </div>
                         <div class='two-col'>
@@ -88,6 +88,22 @@
             </div>`;
       }
       return reviewsHTML;
+    }
+
+    function getStars(rating) {
+      let starsHTML = "";
+      if (rating < 1.5) {
+        starsHTML += "★☆☆☆☆";
+      } else if (rating < 2.5) {
+        starsHTML += "★★☆☆☆";
+      } else if (rating < 3.5) {
+        starsHTML += "★★★☆☆";
+      } else if (rating < 4.5) {
+        starsHTML += "★★★★☆";
+      } else {
+        starsHTML += "★★★★★";
+      }
+      return starsHTML;
     }
 
     function sendFocus() {

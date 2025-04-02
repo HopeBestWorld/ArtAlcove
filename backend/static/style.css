@@ -183,6 +183,8 @@ p {
 
 .stars {
   font-size: 25px;
+  color: #883eff;
+  -webkit-text-stroke: 1px black;
 }
 
 .rate-num {
