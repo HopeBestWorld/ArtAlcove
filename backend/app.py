@@ -85,6 +85,15 @@ def json_search(query):
     matches_filtered_json = matches.to_json(orient='records')
     return matches_filtered_json
 
+def remove_duplicate_reviews(row):
+    combined_reviews = list(zip(row['review_title'], row['review_desc']))
+    unique_reviews = list(set(combined_reviews))
+    if unique_reviews:
+        unique_titles, unique_descs = zip(*unique_reviews)
+        return pd.Series([list(unique_titles), list(unique_descs)])
+    else:
+        return pd.Series([[], []])
+
 @app.route("/")
 def home():
     return render_template('base.html',title="sample html")
@@ -117,9 +126,12 @@ def search_cosine():
     }).reset_index()
 
     merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True) #reset index
+    merged_df[['review_title', 'review_desc']] = merged_df.apply(remove_duplicate_reviews, axis=1)
 
     vectorizer = build_vectorizer(max_features=1000, stop_words='english')
-    tfidf_matrix = vectorizer.fit_transform(merged_df['descr'])
+    
+    merged_df['combined'] = merged_df['descr'] + " " + merged_df['product']
+    tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
     query_vector = vectorizer.transform([query])
 
     results = []
