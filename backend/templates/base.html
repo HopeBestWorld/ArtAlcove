@@ -34,6 +34,23 @@
         />
       </div>
     </div>
+    <div
+      style="
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 400px;
+      "
+    >
+      <span id="unit" class="unit bold">Unit Price</span>
+      <label class="toggle">
+        <input type="checkbox" id="toggleButton" />
+        <span class="slider"></span>
+      </label>
+      <span id="set" class="set">Set Price</span>
+    </div>
+
     <div id="loading-indicator" style="display: none">Loading...</div>
     <div id="answer-box"></div>
     <a href="#top-text" class="scroll-button">^</a>
@@ -110,14 +127,33 @@
       document.getElementById("filter-text-val").focus();
     }
 
+    document
+      .getElementById("toggleButton")
+      .addEventListener("change", function () {
+        const set = document.getElementById("set");
+        const unit = document.getElementById("unit");
+        if (this.checked) {
+          set.classList.add("bold");
+          unit.classList.remove("bold");
+          //unit search
+        } else {
+          set.classList.remove("bold");
+          unit.classList.add("bold");
+          //set search
+        }
+      });
+
     function handleSearch() {
       document.getElementById("answer-box").innerHTML = "";
       document.getElementById("loading-indicator").style.display = "block";
+
+      const isSet = document.getElementById("toggleButton").checked;
 
       fetch(
         "/search_cosine?" +
           new URLSearchParams({
             query: document.getElementById("filter-text-val").value,
+            toggle: isSet ? "set" : "unit",
           }).toString()
       )
         .then((response) => response.json())

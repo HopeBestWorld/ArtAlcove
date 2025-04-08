@@ -107,6 +107,25 @@ def filter_price(query, results):
         new_results = [result for result in results if result['price'] <= int(nums[0])]
     return new_results
 
+def get_new_price(results, isSet):
+    for result in results:
+        if isinstance(result['price'], str):
+            max_price = float(result['price'].replace('$', '').strip())
+        else:
+            max_price = result['price']
+        min_price = re.search(r"\$?(\d+\.?\d*)", result['price_range'])
+        if min_price:
+            min_price = float(min_price.group(1))
+        else:
+            min_price = max_price
+    
+        if isSet:
+            result['price'] = min(min_price * 6, max_price)
+        else:
+            result['price'] = min_price
+        
+    return results
+
 @app.route("/")
 def home():
     return render_template('base.html',title="sample html")
@@ -114,6 +133,11 @@ def home():
 @app.route("/search_cosine")
 def search_cosine():
     query = request.args.get("query")
+    toggle_mode = request.args.get("toggle", "unit")
+    isSet = False
+    if toggle_mode == "set":
+        isSet = True
+
     if not query:
         return json.dumps([])
 
@@ -132,7 +156,7 @@ def search_cosine():
     ])
 
     merged_df = merged_df.groupby(
-        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
+        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr', 'price_range']
     ).agg({
         'review_title': list,
         'review_desc': list
@@ -143,7 +167,9 @@ def search_cosine():
 
     vectorizer = build_vectorizer(max_features=1000, stop_words='english')
     
-    merged_df['combined'] = merged_df['descr'] + " " + merged_df['product']
+    merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
+    merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
+    merged_df['combined'] = merged_df['descr'] + " " + merged_df['product'] + " " + merged_df['review_title_str'] + " " + merged_df['review_desc_str']
     tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
     query_vector = vectorizer.transform([query])
 
@@ -156,6 +182,7 @@ def search_cosine():
                 'product': row['product'],
                 'siteurl': row['siteurl'],
                 'price': row['price'],
+                'price_range' : row['price_range'],
                 'rating': row['rating'],
                 'imgurl': row['imgurl'],
                 'descr': row['descr'],
@@ -163,6 +190,7 @@ def search_cosine():
                 'review_desc': row['review_desc'],
                 'similarity': similarity
             })
+    results = get_new_price(results, isSet)
 
     results.sort(key=lambda x: x['similarity'], reverse=True)
     results = filter_price(query, results)
