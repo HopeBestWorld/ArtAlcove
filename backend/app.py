@@ -47,6 +47,30 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     erasers_reviews_df = pd.DataFrame(data['erasers_reviews'])
     calligraphy_df = pd.DataFrame(data['calligraphy'])
     calligraphy_reviews_df = pd.DataFrame(data['calligraphy_reviews'])
+    colored_paper_df = pd.DataFrame(data['colored_paper'])
+    colored_paper_reviews_df = pd.DataFrame(data['colored_paper_reviews'])
+    fountain_pen_df = pd.DataFrame(data['fountain_pen'])
+    fountain_pen_reviews_df = pd.DataFrame(data['fountain_pen_reviews'])
+    gel_pen_df = pd.DataFrame(data['gel_pen'])
+    gel_pen_reviews_df = pd.DataFrame(data['gel_pen_reviews'])
+    markers_df = pd.DataFrame(data['markers'])
+    markers_reviews_df = pd.DataFrame(data['markers_reviews'])
+    oil_brush_df = pd.DataFrame(data['oil_brush'])
+    oil_brush_reviews_df = pd.DataFrame(data['oil_brush_reviews'])
+    oil_paint_df = pd.DataFrame(data['oil_paint'])
+    oil_paint_reviews_df = pd.DataFrame(data['oil_paint_reviews'])
+    sketchbooks_df = pd.DataFrame(data['sketchbooks'])
+    sketchbooks_reviews_df = pd.DataFrame(data['sketchbooks_reviews'])
+    watercolors_df = pd.DataFrame(data['watercolors'])
+    watercolors_reviews_df = pd.DataFrame(data['watercolors_reviews'])
+    watercolor_pads_df = pd.DataFrame(data['watercolor_pads'])
+    watercolor_pads_reviews_df = pd.DataFrame(data['watercolor_pads_reviews'])
+    watercolor_brushes_df = pd.DataFrame(data['watercolor_brushes'])
+    watercolor_brushes_reviews_df = pd.DataFrame(data['watercolor_brushes_reviews'])
+    watercolor_paper_df = pd.DataFrame(data['watercolor_paper'])
+    watercolor_paper_reviews_df = pd.DataFrame(data['watercolor_paper_reviews'])
+    watercolor_paper_df = pd.DataFrame(data['erasers'])
+    watercolor_paper_reviews_df = pd.DataFrame(data['erasers_reviews'])
 
 app = Flask(__name__)
 CORS(app)
@@ -75,6 +99,33 @@ def json_search(query):
     merged_df = pd.concat([merged_df, merged_df2])
     merged_df2 = pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(colored_paper_df, colored_paper_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(fountain_pen_df, fountain_pen_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(gel_pen_df, gel_pen_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(markers_df, markers_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(oil_brush_df, oil_brush_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(oil_paint_df, oil_paint_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(sketchbooks_df, sketchbooks_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(watercolors_df, watercolors_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(watercolor_pads_df, watercolor_pads_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(watercolor_brushes_df, watercolor_brushes_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+
+
+
     
 
     matches = merged_df.groupby(
@@ -152,7 +203,19 @@ def search_cosine():
         pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(colored_paper_df, colored_paper_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(fountain_pen_df, fountain_pen_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(gel_pen_df, gel_pen_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(markers_df, markers_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(oil_brush_df, oil_brush_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(oil_paint_df, oil_paint_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(sketchbooks_df, sketchbooks_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolors_df, watercolors_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_pads_df, watercolor_pads_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_brushes_df, watercolor_brushes_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
     ])
 
     merged_df = merged_df.groupby(
