@@ -3,16 +3,20 @@ import os
 import re
 from flask import Flask, render_template, request
 from flask_cors import CORS
-from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 import pandas as pd
 from analysis_a5 import build_vectorizer, get_sim
 import numpy as np
 from numpy import linalg as LA
+from sklearn.decomposition import TruncatedSVD
+
+
+from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
+
+from analysis_a5 import build_vectorizer, get_sim
 from tfidf import query
 
-# ROOT_PATH for linking with all your files. 
-# Feel free to use a config.py or settings.py with a global export variable
-os.environ['ROOT_PATH'] = os.path.abspath(os.path.join("..",os.curdir))
+# ROOT_PATH for linking with all your files.
+os.environ['ROOT_PATH'] = os.path.abspath(os.path.join("..", os.curdir))
 
 # Get the directory of the current script
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -69,13 +73,13 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     watercolor_brushes_reviews_df = pd.DataFrame(data['watercolor_brushes_reviews'])
     watercolor_paper_df = pd.DataFrame(data['watercolor_paper'])
     watercolor_paper_reviews_df = pd.DataFrame(data['watercolor_paper_reviews'])
-    watercolor_paper_df = pd.DataFrame(data['erasers'])
-    watercolor_paper_reviews_df = pd.DataFrame(data['erasers_reviews'])
+    erasers_df = pd.DataFrame(data['erasers'])
+    erasers_reviews_df = pd.DataFrame(data['erasers_reviews'])
 
 app = Flask(__name__)
 CORS(app)
 
-# # Sample search using json with pandas
+# Sample search using json with pandas
 def json_search(query):
     matches = []
     merged_df = pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner')
@@ -124,10 +128,6 @@ def json_search(query):
     merged_df2 = pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
 
-
-
-    
-
     matches = merged_df.groupby(
         ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr']
     ).agg({
@@ -169,27 +169,32 @@ def get_new_price(results, isSet):
             min_price = float(min_price.group(1))
         else:
             min_price = max_price
-    
+
         if isSet:
             result['price'] = min(min_price * 6, max_price)
         else:
             result['price'] = min_price
-        
+
     return results
 
 @app.route("/")
 def home():
-    return render_template('base.html',title="sample html")
+    return render_template('base.html', title="sample html")
+
+PRODUCT_WEIGHT = 4
+DESCR_WEIGHT = 3
+REVIEW_TITLE_WEIGHT = 2
+REVIEW_DESC_WEIGHT = 1
 
 @app.route("/search_cosine")
 def search_cosine():
-    query = request.args.get("query")
+    query_str = request.args.get("query")
     toggle_mode = request.args.get("toggle", "unit")
     isSet = False
     if toggle_mode == "set":
         isSet = True
 
-    if not query:
+    if not query_str:
         return json.dumps([])
 
     merged_df = pd.concat([
@@ -225,40 +230,61 @@ def search_cosine():
         'review_desc': list
     }).reset_index()
 
-    merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True) #reset index
+    merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True)
     merged_df[['review_title', 'review_desc']] = merged_df.apply(remove_duplicate_reviews, axis=1)
 
     vectorizer = build_vectorizer(max_features=1000, stop_words='english')
-    
+
     merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
     merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
-    merged_df['combined'] = merged_df['descr'] + " " + merged_df['product'] + " " + merged_df['review_title_str'] + " " + merged_df['review_desc_str']
+    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT
     tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
-    query_vector = vectorizer.transform([query])
+    print(tfidf_matrix.shape)
+    # shape is currently (719, 1000)
+    # 719 documents (rows) — so dataset has 719 entries
+    # 1000 features (columns) — the top 1000 most frequent terms (words)
+    
+    query_vector = vectorizer.transform([query_str])
+
+    # Apply SVD
+    n_components = 299  # n_components must be less than 1000 (number of features) 
+    svd = TruncatedSVD(n_components=n_components)
+    tfidf_matrix_reduced = svd.fit_transform(tfidf_matrix)
+    query_vector_reduced = svd.transform(query_vector)
+    print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
+
+    svd_full = TruncatedSVD(n_components=500)
+    svd_full.fit(tfidf_matrix)
+
+    explained = np.cumsum(svd_full.explained_variance_ratio_)
+    optimal_components = np.searchsorted(explained, 0.90) + 1
+
+    print(f"Number of components to retain 90% variance: {optimal_components}")
+    # currently is 298
+
 
     results = []
-    for index, product_vector in enumerate(tfidf_matrix): #Iterate tfidf matrix directly
+    for index, product_vector_reduced in enumerate(tfidf_matrix_reduced):
         row = merged_df.iloc[index]
-        similarity = get_sim(query_vector, product_vector)
+        similarity = get_sim(query_vector_reduced, product_vector_reduced)
         if similarity > 0:
             results.append({
                 'product': row['product'],
                 'siteurl': row['siteurl'],
                 'price': row['price'],
-                'price_range' : row['price_range'],
+                'price_range': row['price_range'],
                 'rating': row['rating'],
                 'imgurl': row['imgurl'],
                 'descr': row['descr'],
                 'review_title': row['review_title'],
                 'review_desc': row['review_desc'],
-                'similarity': similarity
+                'similarity': float(similarity.item()) # Extract the scalar value
             })
-    results = get_new_price(results, isSet)
 
+    results = get_new_price(results, isSet)
     results.sort(key=lambda x: x['similarity'], reverse=True)
-    results = filter_price(query, results)
+    results = filter_price(query_str, results)
     return json.dumps(results)
 
-
 if 'DB_NAME' not in os.environ:
-    app.run(debug=True,host="0.0.0.0",port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5001)
