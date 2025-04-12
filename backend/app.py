@@ -181,6 +181,11 @@ def get_new_price(results, isSet):
 def home():
     return render_template('base.html',title="sample html")
 
+PRODUCT_WEIGHT = 4
+DESCR_WEIGHT = 3
+REVIEW_TITLE_WEIGHT = 2
+REVIEW_DESC_WEIGHT = 1
+
 @app.route("/search_cosine")
 def search_cosine():
     query = request.args.get("query")
@@ -232,14 +237,20 @@ def search_cosine():
     
     merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
     merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
-    merged_df['combined'] = merged_df['descr'] + " " + merged_df['product'] + " " + merged_df['review_title_str'] + " " + merged_df['review_desc_str']
+    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT
     tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
     query_vector = vectorizer.transform([query])
 
     results = []
     for index, product_vector in enumerate(tfidf_matrix): #Iterate tfidf matrix directly
         row = merged_df.iloc[index]
-        similarity = get_sim(query_vector, product_vector)
+
+        query_lower = query.lower()
+        product_name = row['product'].lower()
+        if query_lower in product_name:
+            similarity = 1.0
+        else:
+            similarity = get_sim(query_vector, product_vector)
         if similarity > 0:
             results.append({
                 'product': row['product'],
