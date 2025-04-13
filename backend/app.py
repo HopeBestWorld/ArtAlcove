@@ -237,7 +237,7 @@ def search_cosine():
 
     merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
     merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
-    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT
+    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT    
     tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
     print(tfidf_matrix.shape)
     # shape is currently (719, 1000)
@@ -266,8 +266,24 @@ def search_cosine():
     results = []
     for index, product_vector_reduced in enumerate(tfidf_matrix_reduced):
         row = merged_df.iloc[index]
+        
+        query_lower = query_str.lower()
+        product_name = row['product'].lower()
         similarity = get_sim(query_vector_reduced, product_vector_reduced)
-        if similarity > 0:
+        if product_name in query_lower:
+            results.append({
+                'product': row['product'],
+                'siteurl': row['siteurl'],
+                'price': row['price'],
+                'price_range': row['price_range'],
+                'rating': row['rating'],
+                'imgurl': row['imgurl'],
+                'descr': row['descr'],
+                'review_title': row['review_title'],
+                'review_desc': row['review_desc'],
+                'similarity': 1.0
+            })
+        elif similarity > 0:
             results.append({
                 'product': row['product'],
                 'siteurl': row['siteurl'],
