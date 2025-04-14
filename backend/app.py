@@ -247,7 +247,7 @@ def search_cosine():
     query_vector = vectorizer.transform([query_str])
 
     # Apply SVD
-    n_components = 299  # n_components must be less than 1000 (number of features) 
+    n_components = 392  # n_components must be less than 1000 (number of features) 
     svd = TruncatedSVD(n_components=n_components)
     tfidf_matrix_reduced = svd.fit_transform(tfidf_matrix)
     query_vector_reduced = svd.transform(query_vector)
@@ -257,10 +257,10 @@ def search_cosine():
     svd_full.fit(tfidf_matrix)
 
     explained = np.cumsum(svd_full.explained_variance_ratio_)
-    optimal_components = np.searchsorted(explained, 0.90) + 1
+    optimal_components = np.searchsorted(explained, 0.95) + 1
 
-    print(f"Number of components to retain 90% variance: {optimal_components}")
-    # currently is 298
+    print(f"Number of components to retain 95% variance: {optimal_components}")
+    # currently is 392
 
 
     results = []
@@ -269,7 +269,7 @@ def search_cosine():
         
         query_lower = query_str.lower()
         product_name = row['product'].lower()
-        similarity = get_sim(query_vector_reduced, product_vector_reduced)
+        similarity = max(0,0, get_sim(query_vector_reduced, product_vector_reduced))
         if product_name in query_lower:
             results.append({
                 'product': row['product'],
