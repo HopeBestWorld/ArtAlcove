@@ -251,7 +251,7 @@ def search_cosine():
     query_vector_reduced = svd.transform(query_vector)
     print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
 
-    svd_full = TruncatedSVD(n_components=500)
+    svd_full = TruncatedSVD(n_components=719)
     svd_full.fit(tfidf_matrix)
 
     explained = np.cumsum(svd_full.explained_variance_ratio_)
