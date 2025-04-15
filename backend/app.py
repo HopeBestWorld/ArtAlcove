@@ -1,3 +1,4 @@
+from collections import defaultdict
 import json
 import os
 import re
@@ -176,6 +177,23 @@ def get_new_price(results, isSet):
 
     return results
 
+def multiple_categories(results):
+    lowest = []
+    remaining = []
+    top = []
+    category_groups = defaultdict(list)
+    for result in results:
+        category = result['category_x']
+        similarity = result['similarity']
+        if similarity >= 0.25:
+            category_groups[category].append(result)
+        else:
+            lowest.append(result)
+    for cat in category_groups:
+        top += category_groups[cat][:3]
+        remaining += category_groups[cat][3:]
+    return top + remaining + lowest
+
 @app.route("/")
 def home():
     return render_template('base.html', title="sample html")
@@ -223,7 +241,7 @@ def search_cosine():
     ])
 
     merged_df = merged_df.groupby(
-        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr', 'price_range']
+        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr', 'price_range', 'category_x']
     ).agg({
         'review_title': list,
         'review_desc': list
@@ -280,6 +298,7 @@ def search_cosine():
                 'descr': row['descr'],
                 'review_title': row['review_title'],
                 'review_desc': row['review_desc'],
+                'category_x': row['category_x'],
                 'similarity': 1.0
             })
         elif similarity > 0:
@@ -293,12 +312,14 @@ def search_cosine():
                 'descr': row['descr'],
                 'review_title': row['review_title'],
                 'review_desc': row['review_desc'],
+                'category_x': row['category_x'],
                 'similarity': float(similarity.item()) # Extract the scalar value
             })
 
     results = get_new_price(results, isSet)
     results.sort(key=lambda x: x['similarity'], reverse=True)
     results = filter_price(query_str, results)
+    results = multiple_categories(results)
     return json.dumps(results)
 
 if 'DB_NAME' not in os.environ:
