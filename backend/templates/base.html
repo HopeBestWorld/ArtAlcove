@@ -96,6 +96,9 @@
     }
 
     function getReviews(review_title, review_desc) {
+      if (review_title.length <= 1) {
+        return `<p>No reviews available</p>`;
+      }
       let reviewsHTML = "";
       for (let i = 0; i < review_title.length; i++) {
         reviewsHTML += `<div class="hover-container reviews">

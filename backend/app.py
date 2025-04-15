@@ -137,7 +137,8 @@ def json_search(query):
 
 def remove_duplicate_reviews(row):
     combined_reviews = list(zip(row['review_title'], row['review_desc']))
-    unique_reviews = list(set(combined_reviews))
+    filtered_reviews = [(title, desc) for title, desc in combined_reviews if title.strip() and desc.strip()]
+    unique_reviews = list(set(filtered_reviews))
     if unique_reviews:
         unique_titles, unique_descs = zip(*unique_reviews)
         return pd.Series([list(unique_titles), list(unique_descs)])
