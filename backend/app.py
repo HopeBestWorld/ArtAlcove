@@ -192,7 +192,7 @@ def multiple_categories(results):
     for cat in category_groups:
         top += category_groups[cat][:3]
         remaining += category_groups[cat][3:]
-    return top + remaining + lowest
+    return (top + remaining + lowest)[:20]
 
 @app.route("/")
 def home():
