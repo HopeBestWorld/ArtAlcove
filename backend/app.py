@@ -279,14 +279,38 @@ def search_cosine():
     print(f"Number of components to retain 95% variance: {optimal_components}")
     # currently is 392
 
+    # Apply SVD with a smaller number of components for interpretability
+    n_components_explain = 20
+    svd_explain = TruncatedSVD(n_components=n_components_explain)
+    tfidf_matrix_reduced_explain = svd_explain.fit_transform(tfidf_matrix)
+    query_vector_reduced_explain = svd_explain.transform(query_vector)
+
+
+    # Get the vocabulary
+    feature_names = vectorizer.get_feature_names_out()
+    components = svd_explain.components_
+
+    def get_top_words(component, n=5):
+        """Gets the top n words for a given SVD component."""
+        sorted_word_indices = np.argsort(np.abs(component))[::-1]
+        return [feature_names[index] for index in sorted_word_indices[:n]]
 
     results = []
-    for index, product_vector_reduced in enumerate(tfidf_matrix_reduced):
+    for index, product_vector_reduced in enumerate(tfidf_matrix_reduced_explain):
         row = merged_df.iloc[index]
-        
+        similarity = max(0, 0, get_sim(query_vector_reduced_explain, product_vector_reduced))
+
+        # Find the top 3 most influential latent dimensions for this product
+        product_dimension_strengths = np.abs(product_vector_reduced)
+        top_dimension_indices = np.argsort(product_dimension_strengths)[::-1][:3]
+
+        product_latent_topics = []
+        for i in top_dimension_indices:
+            top_words = get_top_words(components[i])
+            product_latent_topics.append(f"Related to Dimension {i+1}: {', '.join(top_words)}")
+
         query_lower = query_str.lower()
         product_name = row['product'].lower()
-        similarity = max(0,0, get_sim(query_vector_reduced, product_vector_reduced))
         if product_name in query_lower:
             results.append({
                 'product': row['product'],
@@ -299,7 +323,8 @@ def search_cosine():
                 'review_title': row['review_title'],
                 'review_desc': row['review_desc'],
                 'category_x': row['category_x'],
-                'similarity': 1.0
+                'similarity': 1.0,
+                'latent_topics': product_latent_topics 
             })
         elif similarity > 0:
             results.append({
@@ -313,7 +338,8 @@ def search_cosine():
                 'review_title': row['review_title'],
                 'review_desc': row['review_desc'],
                 'category_x': row['category_x'],
-                'similarity': float(similarity.item()) # Extract the scalar value
+                'similarity': float(similarity.item()),
+                'latent_topics': product_latent_topics 
             })
 
     results = get_new_price(results, isSet)

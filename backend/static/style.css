@@ -308,11 +308,11 @@ html {
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #4285f4;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(22px);
 }
 
@@ -323,4 +323,64 @@ input:checked + .slider:before {
 
 .bold {
   font-weight: bold;
+}
+
+.latent-topics-container {
+  position: relative;
+  /* Needed for absolute positioning of .hover */
+  display: block;
+  /* Ensures it takes up width */
+  cursor: pointer;
+  /* Indicate it's interactive */
+  margin-top: 10px;
+  /* Add some spacing */
+}
+
+.latent-topics-heading {
+  font-weight: bold;
+  margin-bottom: 0px;
+  /* Adjust spacing */
+}
+
+.latent-topics-container .link {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  /* Adjust spacing */
+}
+
+.latent-topics-hover {
+  visibility: hidden;
+  width: auto;
+  /* Adjust width as needed */
+  background-color: #f0f0f0;
+  /* Light background */
+  color: #333;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  white-space: normal;
+  /* Allow wrapping within the hover box */
+}
+
+.latent-topics-container:hover .latent-topics-hover {
+  visibility: visible;
+}
+
+.latent-topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  /* Display as a block list inside the hover */
+}
+
+.latent-topic-item {
+  padding: 5px 0;
+  /* Adjust spacing between items */
+  font-size: 0.9em;
 }
