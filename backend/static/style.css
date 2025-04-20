@@ -327,13 +327,9 @@ input:checked+.slider:before {
 
 .latent-topics-container {
   position: relative;
-  /* Needed for absolute positioning of .hover */
   display: block;
-  /* Ensures it takes up width */
   cursor: pointer;
-  /* Indicate it's interactive */
   margin-top: 10px;
-  /* Add some spacing */
 }
 
 .latent-topics-heading {
@@ -345,7 +341,6 @@ input:checked+.slider:before {
 .latent-topics-container .link {
   font-size: 0.9em;
   margin-bottom: 5px;
-  /* Adjust spacing */
 }
 
 .latent-topics-hover {
@@ -364,7 +359,6 @@ input:checked+.slider:before {
   top: 100%;
   left: 0;
   white-space: normal;
-  /* Allow wrapping within the hover box */
 }
 
 .latent-topics-container:hover .latent-topics-hover {
@@ -376,11 +370,9 @@ input:checked+.slider:before {
   padding: 0;
   margin: 0;
   display: block;
-  /* Display as a block list inside the hover */
 }
 
 .latent-topic-item {
   padding: 5px 0;
-  /* Adjust spacing between items */
   font-size: 0.9em;
 }
