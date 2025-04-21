@@ -262,7 +262,7 @@ html {
 
 .similarity,
 .num {
-  margin-top: 180px;
+  margin-top: 100px;
   color: #378baf;
   font-weight: bold;
 }
@@ -308,11 +308,11 @@ html {
   transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #4285f4;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(22px);
 }
 
@@ -335,7 +335,7 @@ input:checked+.slider:before {
 .latent-topics-heading {
   font-weight: bold;
   margin-bottom: 0px;
-  /* Adjust spacing */
+  width: 100px;
 }
 
 .latent-topics-container .link {

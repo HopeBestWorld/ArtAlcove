@@ -266,6 +266,7 @@ def search_cosine():
     # Apply SVD
     n_components = 392  # n_components must be less than 1000 (number of features) 
     svd = TruncatedSVD(n_components=n_components)
+    X_reduced = svd.fit_transform(tfidf_matrix.toarray())
     print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
 
     svd_full = TruncatedSVD(n_components=719)

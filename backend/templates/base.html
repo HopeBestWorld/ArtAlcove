@@ -3,15 +3,19 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
-  rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
+  rel="stylesheet"
+/>
 
 <body>
   <div class="full-body-container">
     <div id="top-text" class="top-text">
       <div class="row">
         <div class="col1">
-          <img src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}" />
+          <img
+            src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}"
+          />
         </div>
         <div class="col2">
           <h1>Working on an art project?</h1>
@@ -23,17 +27,22 @@
       </div>
       <div class="input-box" onclick="sendFocus()">
         <img src="{{ url_for('static', filename='images/mag.png') }}" />
-        <input placeholder="Enter your query here..." id="filter-text-val"
-          onkeyup="if (event.key === 'Enter') handleSearch()" />
+        <input
+          placeholder="Enter your query here..."
+          id="filter-text-val"
+          onkeyup="if (event.key === 'Enter') handleSearch()"
+        />
       </div>
     </div>
-    <div style="
+    <div
+      style="
         margin-top: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
         margin-left: 400px;
-      ">
+      "
+    >
       <span id="unit" class="unit bold">Unit Price</span>
       <label class="toggle">
         <input type="checkbox" id="toggleButton" />
@@ -62,11 +71,13 @@
     ) {
       let latentTopicsHTML = "";
       if (latent_topics && latent_topics.length > 0) {
-        latentTopicsHTML += "<div class='hover-container latent-topics-container'>";
-        latentTopicsHTML += "<p class='latent-topics-heading'>Related Concepts:</p>";
+        latentTopicsHTML +=
+          "<div class='hover-container latent-topics-container'>";
+        latentTopicsHTML += "<p class='latent-topics-heading'>Related:</p>";
         latentTopicsHTML += "<p class='link'>(See more...)</p>";
-        latentTopicsHTML += "<div class='hover latent-topics-hover'><ul class='latent-topics-list'>";
-        latent_topics.forEach(topic => {
+        latentTopicsHTML +=
+          "<div class='hover latent-topics-hover'><ul class='latent-topics-list'>";
+        latent_topics.forEach((topic) => {
           latentTopicsHTML += `<li class='latent-topic-item'>${topic}</li>`;
         });
         latentTopicsHTML += "</ul></div>";
@@ -85,6 +96,7 @@
                             <p class='stars'>${getStars(rating)}</p>
                             <p class='rate-num'>${rating}</p>
                         </div>
+                        <div>${latentTopicsHTML}</div>
                         <div class='two-col'>
                           <p class='similarity'>Similarity:</p>
                           <p class='num similarity'>${similarity.toFixed(4)}</p>
@@ -94,7 +106,6 @@
                         <p>${descr}</p>
                         <p class='review'>Reviews:</p>
                         <div>${getReviews(review_title, review_desc)}</div>
-                        ${latentTopicsHTML} </div>
                     </div>
                 </div>
             </div>`;
@@ -151,6 +162,7 @@
           unit.classList.add("bold");
           //set search
         }
+        handleSearch();
       });
 
     function handleSearch() {
@@ -161,10 +173,10 @@
 
       fetch(
         "/search_cosine?" +
-        new URLSearchParams({
-          query: document.getElementById("filter-text-val").value,
-          toggle: isSet ? "set" : "unit",
-        }).toString()
+          new URLSearchParams({
+            query: document.getElementById("filter-text-val").value,
+            toggle: isSet ? "set" : "unit",
+          }).toString()
       )
         .then((response) => response.json())
         .then((data) => {
