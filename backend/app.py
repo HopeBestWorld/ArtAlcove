@@ -25,6 +25,69 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 # Specify the path to the JSON file relative to the current script
 json_file_path = os.path.join(current_directory, 'init.json')
 
+PRODUCT_WEIGHT = 4
+DESCR_WEIGHT = 3
+REVIEW_TITLE_WEIGHT = 2
+REVIEW_DESC_WEIGHT = 1
+
+def remove_duplicate_reviews(row):
+    combined_reviews = list(zip(row['review_title'], row['review_desc']))
+    filtered_reviews = [(title, desc) for title, desc in combined_reviews if title.strip() and desc.strip()]
+    unique_reviews = list(set(filtered_reviews))
+    if unique_reviews:
+        unique_titles, unique_descs = zip(*unique_reviews)
+        return pd.Series([list(unique_titles), list(unique_descs)])
+    else:
+        return pd.Series([[], []])
+
+def filter_price(query, results):
+    new_results = results
+    num = re.findall(r'\$\d+\.?\d*|\d+\.?\d*\s*dollars', query)
+    if 'cheap' in query:
+        new_results = [result for result in results if result['price'] <= 20]
+    elif 'expensive' in query:
+        new_results = [result for result in results if result['price'] >= 50]
+    if len(num) > 0:
+        nums = [re.sub(r'^\$| dollars$', '', n) for n in num]
+        new_results = [result for result in results if result['price'] <= int(nums[0])]
+    return new_results
+
+def get_new_price(results, isSet):
+    for result in results:
+        if isinstance(result['price'], str):
+            max_price = float(result['price'].replace('$', '').strip())
+        else:
+            max_price = result['price']
+        min_price = re.search(r"\$?(\d+\.?\d*)", result['price_range'])
+        if min_price:
+            min_price = float(min_price.group(1))
+        else:
+            min_price = max_price
+
+        if isSet:
+            result['price'] = min(min_price * 6, max_price)
+        else:
+            result['price'] = min_price
+
+    return results
+
+def multiple_categories(results):
+    lowest = []
+    remaining = []
+    top = []
+    category_groups = defaultdict(list)
+    for result in results:
+        category = result['category_x']
+        similarity = result['similarity']
+        if similarity >= 0.25:
+            category_groups[category].append(result)
+        else:
+            lowest.append(result)
+    for cat in category_groups:
+        top += category_groups[cat][:3]
+        remaining += category_groups[cat][3:]
+    return (top + remaining + lowest)[:20]
+
 # Assuming your JSON data is stored in a file named 'init.json'
 with open(json_file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
@@ -74,6 +137,68 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     watercolor_paper_reviews_df = pd.DataFrame(data['watercolor_paper_reviews'])
     erasers_df = pd.DataFrame(data['erasers'])
     erasers_reviews_df = pd.DataFrame(data['erasers_reviews'])
+
+    merged_df = pd.concat([
+        pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(alcohol_markers_df, alcohol_markers_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(colored_pencils_df, colored_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(drawing_pencils_df, drawing_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(graphite_df, graphite_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(oil_pastels_df, oil_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(pastel_pencils_df, pastel_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(colored_paper_df, colored_paper_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(fountain_pen_df, fountain_pen_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(gel_pen_df, gel_pen_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(markers_df, markers_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(oil_brush_df, oil_brush_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(oil_paint_df, oil_paint_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(sketchbooks_df, sketchbooks_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolors_df, watercolors_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_pads_df, watercolor_pads_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_brushes_df, watercolor_brushes_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
+    ])
+
+    merged_df = merged_df.groupby(
+        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr', 'price_range', 'category_x']
+    ).agg({
+        'review_title': list,
+        'review_desc': list
+    }).reset_index()
+
+    merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True)
+    merged_df[['review_title', 'review_desc']] = merged_df.apply(remove_duplicate_reviews, axis=1)
+
+    vectorizer = build_vectorizer(max_features=1000, stop_words='english')
+
+    merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
+    merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
+    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT    
+    tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
+    print(tfidf_matrix.shape)
+    # shape is currently (719, 1000)
+    # 719 documents (rows) — so dataset has 719 entries
+    # 1000 features (columns) — the top 1000 most frequent terms (words)
+
+    # Apply SVD
+    n_components = 392  # n_components must be less than 1000 (number of features) 
+    svd = TruncatedSVD(n_components=n_components)
+    X_reduced = svd.fit_transform(tfidf_matrix.toarray())
+    print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
+
+    svd_full = TruncatedSVD(n_components=719)
+    svd_full.fit(tfidf_matrix)
+
+    explained = np.cumsum(svd_full.explained_variance_ratio_)
+    optimal_components = np.searchsorted(explained, 0.95) + 1
+
+    print(f"Number of components to retain 95% variance: {optimal_components}")
+    # currently is 392
 
 app = Flask(__name__)
 CORS(app)
@@ -136,72 +261,9 @@ def json_search(query):
     matches_filtered_json = matches.to_json(orient='records')
     return matches_filtered_json
 
-def remove_duplicate_reviews(row):
-    combined_reviews = list(zip(row['review_title'], row['review_desc']))
-    filtered_reviews = [(title, desc) for title, desc in combined_reviews if title.strip() and desc.strip()]
-    unique_reviews = list(set(filtered_reviews))
-    if unique_reviews:
-        unique_titles, unique_descs = zip(*unique_reviews)
-        return pd.Series([list(unique_titles), list(unique_descs)])
-    else:
-        return pd.Series([[], []])
-
-def filter_price(query, results):
-    new_results = results
-    num = re.findall(r'\$\d+\.?\d*|\d+\.?\d*\s*dollars', query)
-    if 'cheap' in query:
-        new_results = [result for result in results if result['price'] <= 20]
-    elif 'expensive' in query:
-        new_results = [result for result in results if result['price'] >= 50]
-    if len(num) > 0:
-        nums = [re.sub(r'^\$| dollars$', '', n) for n in num]
-        new_results = [result for result in results if result['price'] <= int(nums[0])]
-    return new_results
-
-def get_new_price(results, isSet):
-    for result in results:
-        if isinstance(result['price'], str):
-            max_price = float(result['price'].replace('$', '').strip())
-        else:
-            max_price = result['price']
-        min_price = re.search(r"\$?(\d+\.?\d*)", result['price_range'])
-        if min_price:
-            min_price = float(min_price.group(1))
-        else:
-            min_price = max_price
-
-        if isSet:
-            result['price'] = min(min_price * 6, max_price)
-        else:
-            result['price'] = min_price
-
-    return results
-
-def multiple_categories(results):
-    lowest = []
-    remaining = []
-    top = []
-    category_groups = defaultdict(list)
-    for result in results:
-        category = result['category_x']
-        similarity = result['similarity']
-        if similarity >= 0.25:
-            category_groups[category].append(result)
-        else:
-            lowest.append(result)
-    for cat in category_groups:
-        top += category_groups[cat][:3]
-        remaining += category_groups[cat][3:]
-    return (top + remaining + lowest)[:20]
-
 @app.route("/")
 def home():
     return render_template('base.html', title="sample html")
-
-PRODUCT_WEIGHT = 4
-DESCR_WEIGHT = 3
-REVIEW_TITLE_WEIGHT = 2
-REVIEW_DESC_WEIGHT = 1
 
 @app.route("/search_cosine")
 def search_cosine():
@@ -213,70 +275,8 @@ def search_cosine():
 
     if not query_str:
         return json.dumps([])
-
-    merged_df = pd.concat([
-        pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(alcohol_markers_df, alcohol_markers_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(colored_pencils_df, colored_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(drawing_pencils_df, drawing_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(graphite_df, graphite_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(oil_pastels_df, oil_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(pastel_pencils_df, pastel_pencils_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(soft_pastels_df, soft_pastels_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(acrylics_df, acrylics_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(acrylic_paintbrushes_df, acrylic_paintbrushes_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(calligraphy_df, calligraphy_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(colored_paper_df, colored_paper_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(fountain_pen_df, fountain_pen_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(gel_pen_df, gel_pen_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(markers_df, markers_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(oil_brush_df, oil_brush_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(oil_paint_df, oil_paint_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(sketchbooks_df, sketchbooks_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(watercolors_df, watercolors_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(watercolor_pads_df, watercolor_pads_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(watercolor_brushes_df, watercolor_brushes_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
-    ])
-
-    merged_df = merged_df.groupby(
-        ['product', 'siteurl', 'price', 'rating', 'imgurl', 'descr', 'price_range', 'category_x']
-    ).agg({
-        'review_title': list,
-        'review_desc': list
-    }).reset_index()
-
-    merged_df = merged_df.drop_duplicates(subset='product').reset_index(drop=True)
-    merged_df[['review_title', 'review_desc']] = merged_df.apply(remove_duplicate_reviews, axis=1)
-
-    vectorizer = build_vectorizer(max_features=1000, stop_words='english')
-
-    merged_df['review_title_str'] = merged_df['review_title'].apply(lambda x: ' '.join(x))
-    merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
-    merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT    
-    tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
-    print(tfidf_matrix.shape)
-    # shape is currently (719, 1000)
-    # 719 documents (rows) — so dataset has 719 entries
-    # 1000 features (columns) — the top 1000 most frequent terms (words)
     
     query_vector = vectorizer.transform([query_str])
-
-    # Apply SVD
-    n_components = 392  # n_components must be less than 1000 (number of features) 
-    svd = TruncatedSVD(n_components=n_components)
-    X_reduced = svd.fit_transform(tfidf_matrix.toarray())
-    print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
-
-    svd_full = TruncatedSVD(n_components=719)
-    svd_full.fit(tfidf_matrix)
-
-    explained = np.cumsum(svd_full.explained_variance_ratio_)
-    optimal_components = np.searchsorted(explained, 0.95) + 1
-
-    print(f"Number of components to retain 95% variance: {optimal_components}")
-    # currently is 392
 
     # Apply SVD with a smaller number of components for interpretability
     n_components_explain = 20
