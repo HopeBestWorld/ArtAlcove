@@ -137,6 +137,12 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     watercolor_paper_reviews_df = pd.DataFrame(data['watercolor_paper_reviews'])
     erasers_df = pd.DataFrame(data['erasers'])
     erasers_reviews_df = pd.DataFrame(data['erasers_reviews'])
+    clay_df = pd.DataFrame(data['clay'])
+    clay_reviews_df = pd.DataFrame(data['clay_reviews'])
+    ceramic_df = pd.DataFrame(data['ceramic'])
+    ceramic_reviews_df = pd.DataFrame(data['ceramic_reviews'])
+    beads_df = pd.DataFrame(data['beads'])
+    beads_reviews_df = pd.DataFrame(data['beads_reviews'])
 
     merged_df = pd.concat([
         pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
@@ -161,7 +167,11 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
         pd.merge(watercolor_pads_df, watercolor_pads_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(watercolor_brushes_df, watercolor_brushes_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(clay_df, clay_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(ceramic_df, ceramic_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(beads_df, beads_reviews_df, left_on='product', right_on='product', how='inner')
+
     ])
 
     merged_df = merged_df.groupby(
@@ -250,6 +260,12 @@ def json_search(query):
     merged_df2 = pd.merge(watercolor_paper_df, watercolor_paper_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
     merged_df2 = pd.merge(erasers_df, erasers_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(clay_df, clay_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(ceramic_df, ceramic_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(beads_df, beads_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
 
     matches = merged_df.groupby(
