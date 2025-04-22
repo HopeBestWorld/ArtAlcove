@@ -74649,5 +74649,2892 @@
       "review_desc": "",
       "category": "beads_reviews"
     }
+  ],
+  "weaving": [
+    {
+      "id": 1,
+      "product": "Maysville Cotton Warp",
+      "siteurl": "https://www.dickblick.com/products/maysville-cotton-warp/",
+      "price": "$11.67",
+      "rating": 4.8,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3mpRRhiDDIT32tPJm7ZwbB/bf4695d46aad18b172584eac21ce052b/62800-group3ww-l.jpg?fit=pad",
+      "descr": "This sturdy classic cotton yarn is versatile and economical, time tested and proven. It's ideal for the beginning weaver or for rag rugs, runners, towels, placemats, and more. It is made from 100% U.S.-grown and dyed cotton. The four-ply, strong, durable warp comes in 8 oz, 800-yard ...",
+      "price_range": "$11.67",
+      "category": "weaving"
+    },
+    {
+      "id": 2,
+      "product": "Schacht Cricket Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-cricket-loom/",
+      "price": 236.95,
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/42mU6VbLNcnl2pQdVfMR3t/18ecf49cb9494959bafc039cc93ddfc5/65026-1001-1-4ww.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$228.96 - $244.94",
+      "category": "weaving"
+    },
+    {
+      "id": 3,
+      "product": "Schacht Inkle Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-inkle-loom/",
+      "price": "$119.00",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6sMBIWYw9D4SIA71bqh3j8/1e4d36422c6bb3e6d5b1433ee6a51002/65007-0000-M-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$119.00",
+      "category": "weaving"
+    },
+    {
+      "id": 4,
+      "product": "Wide-Notch Cardboard Looms",
+      "siteurl": "https://www.dickblick.com/products/wide-notch-cardboard-looms/",
+      "price": 19.475,
+      "rating": 4.5,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/vNPnNZ5bKOwyxWtyHwBgY/ff404985a1439c6b39337d32dd1a6847/65002-OA3ww-l.jpg?fit=pad",
+      "descr": "Notches have larger spaces so thicker yarn can be used. Projects can be completed in a shorter amount of time. Each package includes 12 looms except the assorted package includes 20.",
+      "price_range": "$5.21 - $33.74",
+      "category": "weaving"
+    },
+    {
+      "id": 5,
+      "product": "Wool Novelty Weaving Loops",
+      "siteurl": "https://www.dickblick.com/products/wool-novelty-weaving-loops/",
+      "price": 8.07,
+      "rating": 3.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/bRQhAU8OeEQdlXpodIMBW/26e4e8c39f5e26fe8c2b9429c4fda34b/65001-1006-1-4ww.jpg?fit=pad",
+      "descr": "16 oz (454 g) package.",
+      "price_range": "$7.99 - $8.15",
+      "category": "weaving"
+    },
+    {
+      "id": 6,
+      "product": "Cardboard Looms",
+      "siteurl": "https://www.dickblick.com/products/cardboard-looms/",
+      "price": 14.015,
+      "rating": 4,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3jH4c65mETHRsWhcpND02i/f4d3e4d4c8937db062cd6e3ecf305bb3/65005-1005-3ww-l.jpg?fit=pad",
+      "descr": "An economical beginner's loom for teaching textile weaving and design to very young students. Made of practically indestructible chipboard, 1/8\" thick, and perforated for notches. Package of 12 looms.",
+      "price_range": "$8.69 - $19.34",
+      "category": "weaving"
+    },
+    {
+      "id": 7,
+      "product": "Plastic Weaving Needles",
+      "siteurl": "https://www.dickblick.com/products/plastic-weaving-needles/",
+      "price": "$4.56",
+      "rating": "® Susan Bates is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4DBQpN4yAyrpIirVif6KA8/fd458ba0cab206eb8a04c1a25e9a679f/65109-1009-3-4ww.jpg?fit=pad",
+      "descr": "® Susan Bates is a registered trademark.",
+      "price_range": "$4.56",
+      "category": "weaving"
+    },
+    {
+      "id": 8,
+      "product": "Schacht Lilli Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-lilli-loom/",
+      "price": "$81.95",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6IJqrBXv2meffzN4hBWac/3f08d5a99ba5cecbecdae097cd441fc2/66914-1001-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$81.95",
+      "category": "weaving"
+    },
+    {
+      "id": 9,
+      "product": "Inovart Chipboard Weaving Looms",
+      "siteurl": "https://www.dickblick.com/products/inovart-chipboard-weaving-looms/",
+      "price": 14.08,
+      "rating": "™ Inovart is a trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/56SVJwWSo6MWMHZP86sLw7/c77b0502dacdf16ca47f6fef0f525cec/66984-1001-M-4ww.jpg?fit=pad",
+      "descr": "This icon indicates that the product is made with recycled materials.",
+      "price_range": "$8.17 - $19.99",
+      "category": "weaving"
+    },
+    {
+      "id": 10,
+      "product": "Schacht Warping Board",
+      "siteurl": "https://www.dickblick.com/products/schacht-warping-board/",
+      "price": 148,
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/1iWa1h7eH68pWpp8rCFQlV/1c5d514c55c7afd8ff27b1fe598b949f/65234-9000-4ww.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$124.00 - $172.00",
+      "category": "weaving"
+    },
+    {
+      "id": 11,
+      "product": "Harrisville Designs Yarn Packs",
+      "siteurl": "https://www.dickblick.com/products/harrisville-designs-yarn-packs/",
+      "price": "$17.96",
+      "rating": 4,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/fbF189I2tL77MY4plTmK8/1175a1e2b50a478d439071968c907569/65288-3710-1-4ww.jpg?fit=pad",
+      "descr": "Create unique tapestry designs with Harrisville Designs Yarn Packs. Ideally suited for weaving on Harrisville Designs Lap Looms, and other types of looms, these skeins are grouped in specific colorways to create cohesive projects. Each set includes five skeins of colored 100% wool yarn and on...",
+      "price_range": "$17.96",
+      "category": "weaving"
+    },
+    {
+      "id": 12,
+      "product": "Wool Novelty Loop Loom",
+      "siteurl": "https://www.dickblick.com/products/plastic-loop-loom/",
+      "price": "$3.40",
+      "rating": "Add to list",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6XMGHFd1FUo0GDUocDGleA/fc2f5572b95739c25b9d9972d29bafc6/65001-1001-2-4ww.jpg?fit=pad",
+      "descr": "In stock online",
+      "price_range": "$3.40",
+      "category": "weaving"
+    },
+    {
+      "id": 13,
+      "product": "Schacht Portable Tapestry Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-portable-tapestry-loom/",
+      "price": 154.62,
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3vjpOaYVNAeNety5EWktFB/ec9eb005bb046277e4085bf18ae45df5/65020-1025-3ww-l.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$70.24 - $239.00",
+      "category": "weaving"
+    },
+    {
+      "id": 14,
+      "product": "Schacht School Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-school-loom/",
+      "price": "$80.00",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/1EkKVktxeuOucsF6c92ogU/6135afe060b9d243096f6c44da684782/65011-0000-1-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$80.00",
+      "category": "weaving"
+    },
+    {
+      "id": 15,
+      "product": "Wide Notch Chipboard Weaving Looms",
+      "siteurl": "https://www.dickblick.com/products/wide-notch-chipboard-weaving-looms/",
+      "price": 13.69,
+      "rating": "™ Inovart is a trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3qqdatDbSFnXHeF7tAMgoE/78d21ce7dd568f2c16a5ef64a789bbad/66985-1002-M-4ww.jpg?fit=pad",
+      "descr": "™ Inovart is a trademark.",
+      "price_range": "$7.24 - $20.14",
+      "category": "weaving"
+    },
+    {
+      "id": 16,
+      "product": "Harrisville Designs LapLooms and Project Refill Kits",
+      "siteurl": "https://www.dickblick.com/products/harrisville-designs-laplooms-project-refill-kits/",
+      "price": "$51.95",
+      "rating": "Add to list",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/NsrjIoGgxrw55e7otXzEq/0e3dd27ddf25da8f6849126eea97e04f/65290-1001-M-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$51.95",
+      "category": "weaving"
+    },
+    {
+      "id": 17,
+      "product": "Trait-Tex Cotton Warp",
+      "siteurl": "https://www.dickblick.com/products/trait-tex-cotton-warp/",
+      "price": 10.825,
+      "rating": "® Trait-Tex is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/7Ma5Kbaf6l62F1qaDH79NS/73547ea33aa5f8d06c4d8001a0c6b317/65211-group3ww-l.jpg?fit=pad",
+      "descr": "® Trait-Tex is a registered trademark.",
+      "price_range": "$10.56 - $11.09",
+      "category": "weaving"
+    },
+    {
+      "id": 18,
+      "product": "Beka Rigid Heddle Loom",
+      "siteurl": "https://www.dickblick.com/products/beka-rigid-heddle-loom/",
+      "price": "$78.99",
+      "rating": "Add to list",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2SYLR5eiIbaagjh2HWmkUC/ed64a08a41d5e3398966347b1d0e23c9/65019-1010-1-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$78.99",
+      "category": "weaving"
+    },
+    {
+      "id": 19,
+      "product": "DMC Mini Weaving Loom",
+      "siteurl": "https://www.dickblick.com/products/dmc-mini-weaving-loom/",
+      "price": "$24.99",
+      "rating": "® DMC is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/MH3CdqzijC7E1YBPmWb7j/0030ea7d2dce8953a6cd3a0dc1ae8358/64987-1000-5-4ww.jpg?fit=pad",
+      "descr": "® DMC is a registered trademark.",
+      "price_range": "$24.99",
+      "category": "weaving"
+    },
+    {
+      "id": 20,
+      "product": "Clover Pom Pom Maker",
+      "siteurl": "https://www.dickblick.com/products/clover-pom-pom-maker/",
+      "price": 8.35,
+      "rating": "® Clover is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5efCM4FONykWYFlIAVPiQZ/c6963a0134fc15153e7cfabd3b25bcaf/03184-1001-1-4ww.jpg?fit=pad",
+      "descr": "® Clover is a registered trademark.",
+      "price_range": "$7.61 - $9.09",
+      "category": "weaving"
+    },
+    {
+      "id": 21,
+      "product": "Harrisville Designs Friendly Loom",
+      "siteurl": "https://www.dickblick.com/products/harrisville-designs-friendly-loom/",
+      "price": "$380.00",
+      "rating": "Add to list",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5Jf7VcdaKaIeN5Ptmogfke/324aec44fe3521e09b21e8d4698b7b65/65013-1048-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$380.00",
+      "category": "weaving"
+    },
+    {
+      "id": 22,
+      "product": "Schacht Hand Bobbin Winder and Bobbins",
+      "siteurl": "https://www.dickblick.com/products/schacht-hand-bobbin-winder/",
+      "price": 99.015,
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/1ElISRKUd0NL9lpPHeqGjM/584f47d69803930e70b45c78ff8ce03e/65018-1010-4ww.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$20.05 - $177.98",
+      "category": "weaving"
+    },
+    {
+      "id": 23,
+      "product": "Schacht Cricket Loom Stands",
+      "siteurl": "https://www.dickblick.com/products/schacht-cricket-loom-stands/",
+      "price": "$180.19",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3ilxvlNKSzRAImNOhnfGhW/07af683517972a5aba0a177ee1e6c5b1/65026-1110-M-4ww.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$180.19",
+      "category": "weaving"
+    },
+    {
+      "id": 24,
+      "product": "Schacht Zoom Loom",
+      "siteurl": "https://www.dickblick.com/products/schacht-zoom-loom/",
+      "price": "$39.40",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5SdBZ29ZmA9RC0K1dJ6ez5/efea8103bddb4c32016a6e54d277c6a8/65091-1044-2-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$39.40",
+      "category": "weaving"
+    },
+    {
+      "id": 25,
+      "product": "Bucilla All-In-One Loom Kit",
+      "siteurl": "https://www.dickblick.com/products/bucilla-all-In-one-loom-kit/",
+      "price": "$6.99",
+      "rating": "® Bucilla is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4eBBna4ejCpNvsuDSHcVe9/c9eaf3e0d27a1e021f225ec3d3bd50a5/65128-1008-M-4ww.jpg?fit=pad",
+      "descr": "® Bucilla is a registered trademark.",
+      "price_range": "$6.99",
+      "category": "weaving"
+    },
+    {
+      "id": 26,
+      "product": "Beka Weaving Frame",
+      "siteurl": "https://www.dickblick.com/products/beka-weaving-frame/",
+      "price": "$34.99",
+      "rating": "Add to list",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/13vcLqDoKNF7mB2h3GmRDF/04d587562674073556f090385997a20d/65012-0014-3ww-l.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$34.99",
+      "category": "weaving"
+    },
+    {
+      "id": 27,
+      "product": "Todd Loom",
+      "siteurl": "https://www.dickblick.com/products/todd-loom/",
+      "price": 52.905,
+      "rating": 3,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2t47AUB9qbf6WSUfIpBmlP/fade255bdb6366ca6e8d5271de0a8dbc/65003-1003-4ww.jpg?fit=pad",
+      "descr": "The Todd Loom is a great loom for teaching the elementary principles of weaving without heddles. It includes a shuttle and instructions. The loom measures 10\" × 12\" and has a maximum weaving width of 8½\". Choose from an adjustable or a non-adjustable oak wood...",
+      "price_range": "$42.55 - $63.26",
+      "category": "weaving"
+    },
+    {
+      "id": 28,
+      "product": "Leisure Arts Bracelet Loom",
+      "siteurl": "https://www.dickblick.com/products/leisure-arts-bracelet-loom/",
+      "price": "$6.99",
+      "rating": "® Leisure Arts is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5w96os76Hc7jOB6mZpI7t4/5db3eb16488a0b4e9ec923b8f2f89ca9/80957-1001-3-4ww.jpg?fit=pad",
+      "descr": "® Leisure Arts is a registered trademark.",
+      "price_range": "$6.99",
+      "category": "weaving"
+    },
+    {
+      "id": 29,
+      "product": "Schacht Card Weaving Cards",
+      "siteurl": "https://www.dickblick.com/products/schacht-card-weaving-cards/",
+      "price": "$14.00",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4j9jcDXw1pUwj2oZdnInrZ/93a8c5b1ec7e577666949781f464bee7/66982-1025-M-4ww.jpg?fit=pad",
+      "descr": "® Schacht is a registered trademark.",
+      "price_range": "$14.00",
+      "category": "weaving"
+    },
+    {
+      "id": 30,
+      "product": "Schacht Spinning Wheel Travel Bobbin",
+      "siteurl": "https://www.dickblick.com/products/schacht-spinning-wheel-travel-bobbin/",
+      "price": "$48.00",
+      "rating": "® Schacht is a registered trademark.",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/28J5G2BktQdgPGczDlwihK/422165778eb1e0fa0ef861934856dd59/66979-1001-M-4ww.jpg?fit=pad",
+      "descr": "Learn more\nLearn more",
+      "price_range": "$48.00",
+      "category": "weaving"
+    }
+  ],
+  "weaving_reviews": [
+    {
+      "id": 1,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I will be buy this again.",
+      "review_desc": "this is one of my favorites!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 2,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving.",
+      "review_desc": "Love the green color. A nice rich green",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 3,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving.",
+      "review_desc": "A nice deep color, better than white or off white. Great for weaving.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 4,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Nice rich cotton, great for warp material",
+      "review_desc": "A nice rich red color. Great for the warp for weaving.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 5,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving / warp",
+      "review_desc": "Nice rich color, great for weaving warp",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 6,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for my warp",
+      "review_desc": "Nice color, sturdy and can't beat the price",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 7,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Nice 8/4",
+      "review_desc": "Beautiful color, great quality and right price.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 8,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I will buy this again.",
+      "review_desc": "Love weaving with this cotton yarn.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 9,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Best carpet warp around",
+      "review_desc": "The best carpet warp around. This yarn is perfect for all weaving projects, carpets or not!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 10,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Great product!",
+      "review_desc": "This was a recommended product. Great price. I would buy again.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 11,
+      "product": "Schacht Cricket Loom",
+      "review_title": "a great purcahse",
+      "review_desc": "My first weaving experience... so far it is going well! I was able to put the loom together very easily following a youtube video. I did the same to add the warp threads and I am already enjoying my first practice piece.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 12,
+      "product": "Schacht Cricket Loom",
+      "review_title": "We will definitely purchase these again when we need them",
+      "review_desc": "We are so happy with our purchase of 2 new table looms for our weaving studio. Our adult classes and adults with learning differences classes love to come to our art center and weave! Setup was easy and they were exactly what we need!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 13,
+      "product": "Schacht Cricket Loom",
+      "review_title": "Great loom!",
+      "review_desc": "The Cricket loom is great. Online instructions for assembly were easy to follow. Taking online beginner course through Yarnworks and loom is working well.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 14,
+      "product": "Schacht Cricket Loom",
+      "review_title": "Loving to learn to weave on my Cricket",
+      "review_desc": "Being mostly a crocheter, I have no weaving experience prior to this 15\" Cricket loom. I want to do dish towels so started with the 15\" rather than the 10\". My first project is a stash buster scarf following Angela Tong's online class. I'm really enjoying it and learning tons. Great loom!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 15,
+      "product": "Schacht Cricket Loom",
+      "review_title": "I would order from this company again!",
+      "review_desc": "This is my first rigid heddle (and my first order with Bick Art). I am a crafter and always wanted to learn weaving. This Cricket loom made it easy. I've already completed 3 projects and sold 2!!! Blick Art made ordering easy. The Cricket wasn't as expensive as I thought it would be (I've seen the 15\" at much higher prices elsewhere). Shipping was fast (even if FedEx lost my package for a day). It arrived neatly and carefully packaged and I'm happy. Next I am going to order some easels for the grandkids!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 16,
+      "product": "Schacht Cricket Loom",
+      "review_title": "yes",
+      "review_desc": "Great and having fun using it",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 17,
+      "product": "Schacht Cricket Loom",
+      "review_title": "I'm hooked on Blick",
+      "review_desc": "My Grandaughter was thrilled with the loom, and I was thrilled with the service...",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 18,
+      "product": "Schacht Cricket Loom",
+      "review_title": "Nice beginner's loom",
+      "review_desc": "Just for fun projects. The YouTube videos are very helpful. Couldn't get started with out them.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 19,
+      "product": "Schacht Cricket Loom",
+      "review_title": "Excellent, simple loom",
+      "review_desc": "I have the 10 inch, and wanted a larger one (I also have a 24 in. Kromski). Super easy to use, warp and fits easily on the edge of a table because it has a deep groove. Tension stays tight. If you are buying one, I recommend this one over the 10 in for more weaving room.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 20,
+      "product": "Schacht Cricket Loom",
+      "review_title": "The quality of this loom is exceptional.",
+      "review_desc": "This is my first loom and I am learning to weave on it. The 15\" loom is nice as you can make larger weaving projects. Easy to put together.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 21,
+      "product": "Schacht Inkle Loom",
+      "review_title": "I love my Schacht Inkle Loom!",
+      "review_desc": "I'm really pleased with this inkle loom. I'm an absolute beginner to weaving and I found the Schacht videos online helpful and paper instructions included with this loom to be well written. I've made two bands so far and it's quickly becoming my favorite pastime for calming my nerves! The loom is sturdy and well made, and I'm very happy with my purchase.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 22,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Well designed and well built loom.",
+      "review_desc": "Well designed and well built loom. The wood has all been sanded perfectly smooth, so it's ready for weaving!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 23,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Love this loom!!!",
+      "review_desc": "This inkle loom is excellent quality, shipped right away and I even received it earlier than what the website said. I've made one belt so far using this loom and tablet weaving. Its so easy to move the yarn on this loom when i need to move my work and the tension rod is easy to adjust and securely holds the tension. Love this and I'm so happy I got it from dick blick vs another online store.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 24,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Awesome loom",
+      "review_desc": "I love this loom! I've made two bands on it now and can't wait to make more. The tension system is great and I appreciate the versatility of inkle looms.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 25,
+      "product": "Schacht Inkle Loom",
+      "review_title": "A wonderful little loom!",
+      "review_desc": "This is a very well made loom. The pegs are fitted well and don't budge! The instruction booklet is clearly written; I was warped and weaving in no time! I've recommended this loom to fellow weavers.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 26,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Excellent Loom!",
+      "review_desc": "Excellent loom! I use it for inkle, pick-up, and tablet weaving. The maximum warp is long enough to weave both a long dog leash plus the collar. It's sturdy and I expect to get lots of use out of it. I would definitely recommend it, and if I need to buy another, I'll buy it from Blick. It was the best deal I found, in stock and ready to go, with free shipping. Now I just need to convince Blick to carry all the colors of Maysville 8/4 cotton warp! 😋",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 27,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Perfect Inkle Loom at the Best Price!",
+      "review_desc": "Presently, I own three inkle looms. This Schacht loom is the easiest to work with and Blick sold it at the best price.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 28,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Best price anywhere!",
+      "review_desc": "Lower price, free shipping and Blick coupon gave me the incentive to try a new hobby I have been thinking about.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 29,
+      "product": "Schacht Inkle Loom",
+      "review_title": "Love it!",
+      "review_desc": "It s perfect. Just what I wanted. Very pleased.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 30,
+      "product": "Schacht Inkle Loom",
+      "review_title": "I am very happy with my new Inkle Loom",
+      "review_desc": "Easy to read directions and the ability to access online videos.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 31,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Great looms for elementary school kids",
+      "review_desc": "The cardboard looms came on time. They were packaged well, and in good condition. They are great for my elementary weaving unit!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 32,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Nice loom",
+      "review_desc": "I use these for high school weaving projects they hold up to repeated use and can easily be replaced when they wear out.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 33,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "I love the wide notches for elementary students",
+      "review_desc": "I love these compared to the looms with no space. I wish they they would offer a chipboard or wood version as well!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 34,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Continuous Buy",
+      "review_desc": "I have purchased this product for my Elementary Art Class for the past two years. The kids love weaving and this product is sturdy enough to hold up to their use. A definite recommendation! #sweepstakes",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 35,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Great Product",
+      "review_desc": "I was unable to use the supplies due to school closure. I can say that the items were exactly what I wanted and I hope to use them in the future. Customer service in ordering and delivery was excellent.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 36,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Perfect for teaching!",
+      "review_desc": "I will be using these looms to demonstrate weaving to children and adults at our public library as well as our County Fair.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 37,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "Maybe",
+      "review_desc": "From the photo of this product, I assumed the warp would be vertical along the 6 inch line and not the 4 inch. So the resulting weave is short and odd. I recommend the makers do the notches along the 4 inch side so that the warp will be 6 inches. I do like the sturdiness of the cardboard. Thanks.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 38,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "I would buy again.",
+      "review_desc": "Really pleased with product exactly as described.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 39,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "I would not buy this product again.",
+      "review_desc": "We're sorry that the looms you received were not as expected. As pictured on our site, the 4\" x 6\" looms do have the warp notches on the 6\" side; however, there should have been seven notches rather than four. We have checked our stock and can confirm that the product we're sending out will be as pictured, and of course we were happy to accommodate your return. We apologize for any inconvenience this issue may have caused.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 40,
+      "product": "Wide-Notch Cardboard Looms",
+      "review_title": "I love this product!",
+      "review_desc": "I use these looms as part of an educational business I own. They are extremely solid and stand up to children's hands. I like that the notches are wide set. Fantastic product - I would be disappointed if Blicks stopped carrying them.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 41,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "15 Years of Creative Use for Loops!",
+      "review_desc": "At Girls on the Run Vermont, we use this product as lap counters for all of our Girls on the Run and H&S teams. The participants are asked to set lap goals for the workout portion of the lesson/practice. A loop is given to each participant as they complete their lap. The loops are visual reminders/counters to be totaled at the end of the workout so their laps can be recorded. The participants find the loops very motivating. We love them, too, because they are reusable, colorful, affordable, and one bag usually supplies one team for the season. We generally have 120 teams :)!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 42,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Great loops at a very Fair price!",
+      "review_desc": "Nice traditional loops for pot holders. Very fair pricing! The loops are not as nice as some on the market but they are just a fraction of the price and do make a nice pot holder, I call them Farm Style Traditional. Yes I will purchase again and I will recommend to my friends and family!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 43,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Also loops at a awesome price!",
+      "review_desc": "Nice traditional loops for pot holders. Very fair pricing! The loops are not as nice as some on the market but they are just a fraction of the price and do make a nice pot holder, I call them Farm Style Traditional. Yes I will purchase again and I will recommend to my friends and family!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 44,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Old school loopers",
+      "review_desc": "Some of these loopers have a bit of a rustic look to them which I do not mind terribly. They look like they are tops & toes from socks & some have a bit of a second color on one side. They look just like the bags I used to buy as a child with my allowance. I sort the \"odd loops\" into bags & incorporate them in an intentional way, utilizing the 2-tone loops as part of my pattern.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 45,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "At least I got some needed white loops",
+      "review_desc": "We are sorry to hear that many of these loops did not meet your expectations. Our Customer Care Team is happy to assist you with an exchange and will be in touch. Please do not hesitate to call us at 1-800-723-2787 if you ever receive a product that is not as expected. We’re here to ensure that you are completely satisfied with every purchase.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 46,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Yes!",
+      "review_desc": "Program materials",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 47,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Fun pastime.",
+      "review_desc": "Interesting combination of colors, perfect for artsy endeavors. I used an adjustable Whiting loom with it downsized one notch to accommodate the smaller size of the loops.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 48,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Bright colors, stretchy loops.",
+      "review_desc": "Bright colors and easy for kids to stretch to warp potholder loom.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 49,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Loops",
+      "review_desc": "Not exactly made the way my mom wanted, but best we could find",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 50,
+      "product": "Wool Novelty Weaving Loops",
+      "review_title": "Perfect product for our needs!",
+      "review_desc": "We use the polyester loops as lap counters for Girls on the Run programs in our area. They are the perfect way to keep track of laps the girls are running in preparation for a 5K!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 51,
+      "product": "Cardboard Looms",
+      "review_title": "Weaving class tool.",
+      "review_desc": "I use these for a beginner weaving group. I like theme for the narrower slit/ warp ends per inch. I have purchased these before and would buy again.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 52,
+      "product": "Cardboard Looms",
+      "review_title": "Waste of money",
+      "review_desc": "Thank you for taking the time to share your feedback with us. We'd like to work with you to resolve this in the best way possible. We hope you'll reach out to our Customer Care Center at 1-800-723-2787 so we can help!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 53,
+      "product": "Cardboard Looms",
+      "review_title": "Great loom for beginners",
+      "review_desc": "I am a believer in these cardboard looms for elementary students and you will be too. Long gone are the days of making my own out of cut up boxes! Stringing the warp can be difficult for some of my younger students but not insurmountable. I will be using these again and again.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 54,
+      "product": "Cardboard Looms",
+      "review_title": "Good and sturdy, excellent value",
+      "review_desc": "These looms are quite sturdy, made of stout chipboard. I warp them with crochet cotton, and leave a little loop on the back when going from one slot to the next. I do this for two reasons; 1. It gives you the ability to loosen a warp thread if a student weaves with bulky materials that tighten the warp. 2. When weaving is finished, you can easily snip the loops to take the piece off the loom, and use the loom again. Before warping the first time, I go along and make sure all the slots are open all the way to the top; sometimes the sections between slots are attached right at the top, and this makes warping easier. I have students start by weaving two folded strips of paper in before they start their weaving, as spacers so when the warp is cut off the loom at the end, there are tails of warp that can be tied together to make fringe, or woven back up into the work to make a secure end. If you were to start weaving right at the end of the loom (which is what the picture here shows,) how would you remove it from the loom and secure the ends?",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 55,
+      "product": "Cardboard Looms",
+      "review_title": "Great price #Sweepstakes",
+      "review_desc": "I love the size of the looms for making satchels. We weave half way down then take off and sew sides, add yarn to wear it around neck.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 56,
+      "product": "Cardboard Looms",
+      "review_title": "Cardboard looms",
+      "review_desc": "Love the size for my students, small enough to complete a satchel (we do half way down, takeoff then sew up sides). The only thing was the very end needs to be trimmed to use the notches. Looms can be used for more than once great value for the money!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 57,
+      "product": "Cardboard Looms",
+      "review_title": "Our art teacher thought they were wonderful quality!",
+      "review_desc": "Great product! The description is exactly what we got and it we received it in just a couple days of ordering.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 58,
+      "product": "Cardboard Looms",
+      "review_title": "Very durable weaving looms.",
+      "review_desc": "My Elementary students reuse these looms year after year. Hold up well compared to others I have tried.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 59,
+      "product": "Cardboard Looms",
+      "review_title": "Not reusable",
+      "review_desc": "We're sorry to hear that these looms haven't met your expectations, and we hope you'll reach out to our Customer Care Center at 1-800-723-2787 for further assistance. We'll be happy to help you!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 60,
+      "product": "Cardboard Looms",
+      "review_title": "I need more of these!",
+      "review_desc": "Inexpensive and easy to use! Teaching elementary students the art of weaving is hard enough, but these looms made it fun and easy. I will be buying larger ones in the near future. The quality is also nice.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 61,
+      "product": "Plastic Weaving Needles",
+      "review_title": "Hard to find",
+      "review_desc": "hard to find at retail, appreciate the consistent inventory. I use these in classroom weaving activity kits.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 62,
+      "product": "Plastic Weaving Needles",
+      "review_title": "Good for beginners",
+      "review_desc": "Use for beginner weavers and demonstrations. A little bit too bendy, but good for kids.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 63,
+      "product": "Schacht Lilli Loom",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 64,
+      "product": "Inovart Chipboard Weaving Looms",
+      "review_title": "Great little cardboard loom",
+      "review_desc": "Nice heavy-duty cardboard looms, perfect for learning, practicing or sampling!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 65,
+      "product": "Schacht Warping Board",
+      "review_title": "Would recommend to a friend.",
+      "review_desc": "Like it a lot, perfect for small projects, wished it would have had post at the other end.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 66,
+      "product": "Schacht Warping Board",
+      "review_title": "Glad I bought this",
+      "review_desc": "I'm just learning to warp with the warping board, but so far I like using it. It is a very manageable size for my tabletop.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 67,
+      "product": "Schacht Warping Board",
+      "review_title": "Nice source for my needs",
+      "review_desc": "I was glad to find this Schacht Warping Board. I have a small warp to wind and it is just what I was looking for. Good and efficient shipping experience Thanks!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 68,
+      "product": "Schacht Warping Board",
+      "review_title": "Warping Made Easy",
+      "review_desc": "This is my second warping board, my other is really large and I wanted one that was a bit easier to maneuver. It goes together really easily and, if necessary, is also easy to disassemble for storage. The wood is smooth enough to not snag my yarn but not so smooth that it slips and slides. The only thing I would like is for the pegs to be on 4 sides not just 3. It makes it a bit more challenging to map out my warping pattern and plan my cross; I was able to work out my path for the yarn but would appreciate the flexibility of having all 4 sides available for use. I found the best price here and am very happy with both the service and the product.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 69,
+      "product": "Schacht Warping Board",
+      "review_title": "Great quality and easy to assemble",
+      "review_desc": "wonderful warping board, great quality, excellent price, and so easy to put together. Would highly recommend this",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 70,
+      "product": "Schacht Warping Board",
+      "review_title": "I would buy this product again.",
+      "review_desc": "The warping board itself is good. Dressing the loom with the warped yarn is definitely more challenging than direct warping.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 71,
+      "product": "Schacht Warping Board",
+      "review_title": "Great price and great service",
+      "review_desc": "This will allow me to put a longer warp on my loom without tying up so much space in my home.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 72,
+      "product": "Schacht Warping Board",
+      "review_title": "Warping Board",
+      "review_desc": "This warping board is perfect for my needs. It is well constructed. It was safely packaged and shipped quickly.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 73,
+      "product": "Schacht Warping Board",
+      "review_title": "Warping board purchase",
+      "review_desc": "I am so delighted with my Schacht warping board. I compared prices from the vendors and Blick's price was the best. The item arrived quickly and in perfect shape. Assembly was a breeze. Thanks for good service.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 74,
+      "product": "Schacht Warping Board",
+      "review_title": "Perfect Product",
+      "review_desc": "This warping board is extremely well-made. All the wood is nicely finished and very pleasant to handle. The board is very sturdy, which is important because the warp winds up under a lot of tension as it is wrapped. It is easy to assemble and disassemble to store It was shipped promptly and packaged well. The price I found at Blick was better than any other I saw on-line for the same product.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 75,
+      "product": "Harrisville Designs Yarn Packs",
+      "review_title": "Liked the colors",
+      "review_desc": "Like that the colors were a little different in texture and thickness",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 76,
+      "product": "Harrisville Designs Yarn Packs",
+      "review_title": "Like the colors but might not select a collect again",
+      "review_desc": "New to weaving so didn't know how much yarn I would need. The one problem I have with the collection was you don't get an even amount of each color and I would have chosen a different distribution of the colors. I like the quality of the yarn. Not a lot of yarn enough for one project which I think is fair for the cost.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 77,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Retro programming",
+      "review_desc": "These will be used for an adult DIY program. I'm feeling nostalgic.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 78,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Plastic loom with metal hook for crochet.",
+      "review_desc": "Plastic loom with metal hook for crochet finishing edges of potholder.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 79,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "I would buy this product again",
+      "review_desc": "The item is very sturdy and I think it will hold up to lots of use over time. It was inexpensive so I was expecting less!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 80,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Great deal, and product.",
+      "review_desc": "These worked fantastic, my Wife is making Cloth Masks and these are the ear loops!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 81,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "I would order again",
+      "review_desc": "I ordered these loops as a replacement for elastic for making masks. It's not my first choice, but works in a pinch.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 82,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "More looms for the money",
+      "review_desc": "A+ compared to all others out there",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 83,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "I would love these, but the quality has been too low",
+      "review_desc": "We apologize for the issues you had with this product, and we'd like to take care of this for you. One of our Customer Care Agents has contacted you via email to assist.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 84,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Great for kids!",
+      "review_desc": "I teach elementary and middle school are and I love these looms! The kids love making the potholders! It's pretty easy for them to do. I would say these are great for grade 5 and up!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 85,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Works great, just cut up your worn out socks.",
+      "review_desc": "«:::A:::» «:::W:::» «:::E:::» «:::S:::» «:::O:::» «:::M:::» «:::E:::»",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 86,
+      "product": "Wool Novelty Loop Loom",
+      "review_title": "Plastic Loop Loom",
+      "review_desc": "I had been looking for this product in stores for a long time. I am thrilled with my purchase. Thank you.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 87,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Would purchase again",
+      "review_desc": "An excellent loom",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 88,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": ".",
+      "review_desc": ".",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 89,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Makes the tapestry loom more useable",
+      "review_desc": "The price for these four pieces of wood is excellent—and beats most other sellers by a long shot.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 90,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "This is a great loom.... I love it... great quality..",
+      "review_desc": "I will be using this for both tapestry and making scarfs...",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 91,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Very pleased with item and process",
+      "review_desc": "Best price. Very sturdy. Easy process. Quick delivery. This was my first purchase and it was an extremely easy and satisfying experience. My only regret is I have not purchased here before, but definitely plan to in the future as needs arise.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 92,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Lovely Loom!",
+      "review_desc": "I love the quality of the construction and the simplicity of use. I am a beginner but I did a lot of research before purchasing, and this loom has the versatility I hoped for. The 25\" width and the possibility to weave a tapestry up to 60\" long was one attraction and it has a good tension adjustment system. I also didn't want to have to buy numerous after market parts so I like that one makes their own (reusable) string heddles giving great control over desired epi. Also the loom has the option of 4 sheds, adding more versatility should I want to experiment with other types of weaving. All in all I have been very happy with this purchase.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 93,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Well made beautiful loom!",
+      "review_desc": "I am so excited to use this loom! As a student, it is perfect for me. Easily fits under my dorm bed.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 94,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "What a great loom!",
+      "review_desc": "I cannot say how much I am enjoying weaving my tapestry on this loom. I told my husband that sometimes I feel almost guilty being able to have so much fun. I love it! Love it! Love it! When we have more room and more money, I'd love to purchase the Table Loom.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 95,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Perfect for my loom!",
+      "review_desc": "Easy to adjust for comfortable weaving. Wouldn't want to weave without it now. Excellent service and price from Blick.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 96,
+      "product": "Schacht Portable Tapestry Loom",
+      "review_title": "Tapestry loom & stand.",
+      "review_desc": "Perfect for a beginner weaver and still meets the needs of an experienced weaver. I wish it had pins or grooves to space the warp. It's easy to take when we go on road trips. I recommend it, you'll love it",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 97,
+      "product": "Schacht School Loom",
+      "review_title": "Excellent loom for beginning and even experienced weavers",
+      "review_desc": "After falling out of the weaving habit for a really long time, I purchased this loom as an economical way of returning to the craft. About 15 years ago, I'd ordered a set of Schacht School Looms from Blick for an afterschool program for kids in grades K-12, and the looms held up remarkably well, even under daily and not always gentle use. Before purchasing one for myself, I checked out some other tapestry looms on the market, but kept coming back to the Schact. Craftsmanship is excellent, and it was really easy to assemble. Although users will be limited by the size, it's a spot-on piece of weaving equipment for making small tapestries, bags, and even pillows; larger projects will involve sewing the pieces together. As a textile design major with a specialization in weaving, I highly recommend this loom!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 98,
+      "product": "Schacht School Loom",
+      "review_title": "Perfect!",
+      "review_desc": "This loom is sturdy and just the right size to make a woven wall hanging. I've also made a handbag. I'm very pleased with this purchase.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 99,
+      "product": "Schacht School Loom",
+      "review_title": "Exactly what I was looking for!",
+      "review_desc": "Perfect for woven wall decor",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 100,
+      "product": "Schacht School Loom",
+      "review_title": "Nice Loom for a beginner",
+      "review_desc": "Very nice quality loom for the money. I have taken my first lesson in tapestry weaving and found it easy to use. I was able to order this from Dick Blick at a less expensive price than other sites. It was shipped in good condition and arrived when expected.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 101,
+      "product": "Schacht School Loom",
+      "review_title": "OBSESSED",
+      "review_desc": "Honestly, I am obsessed with this loom. It was super easy to put together and works like a rockstar! So far I honestly have loved it. I'm a first time weaver but have really wanted to get into it and couldn't have asked for a better/easier starter kit. The instructions packet was also very detailed which was nice.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 102,
+      "product": "Schacht School Loom",
+      "review_title": "Easy to use.",
+      "review_desc": "Very easy way to learn to weave. Easy directions.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 103,
+      "product": "Schacht School Loom",
+      "review_title": "High Qaulity",
+      "review_desc": "I started making my own tapestries by making looms from cardboard and decided I should upgrade to an actual loom. I am glad I picked this one because the size is perfect for my studio table. It's also light enough that I can carry it with me wherever I am going. It comes with two warping tools that I have found to work great. I think I might upgrade to the bigger Schact loom in the future.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 104,
+      "product": "Schacht School Loom",
+      "review_title": "Couldn't ask for better",
+      "review_desc": "I became obsessed with weaving only recently and couldn't wait to accumulate all the tools and materials necessary to start my own projects. I could have built my own loom, but I wanted it to be of high quality so I wouldn't be frustrated by working with a substandard loom that I made by hand. I looked around at looms of various constructions and sizes, and this Schacht School Loom fit the bill of what I most wanted. The price was very reasonable, my order from Blick arrived soon after I made the purchase, everything was just as described, assembly was very easy, and I was right on my way to weaving. I love working with the loom and look forward to it every day. The fact that it has legs that enable the loom to stand up on a surface means it's stable and not flopping around in your lap or on a table. It also feels like it could last a lifetime. I love it!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 105,
+      "product": "Schacht School Loom",
+      "review_title": "Simple design, does exactly what it's intended to do.",
+      "review_desc": "Really nice intro loom. My only issue was with one of the sticks the loom came with. It had a little splinter in it that gets caught on the wool I'm using every time I use the stick to weave. Not too much of an issue since I'll just use some 320 grit sand paper and it looks like the stick will be just fine after that.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 106,
+      "product": "Wide Notch Chipboard Weaving Looms",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 107,
+      "product": "Harrisville Designs LapLooms and Project Refill Kits",
+      "review_title": "Great Loom, High Quality",
+      "review_desc": "Wonderful loom! This was a present for my 8 year old daughter. But, I can see that it is high quality and could easily be a good starter loom for any age. Large enough for many different projects.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 108,
+      "product": "Harrisville Designs LapLooms and Project Refill Kits",
+      "review_title": "Impressive quality",
+      "review_desc": "We bought this for my daughter and she is using it for a large art product. It is very well made. The quality of the starter materials that are included is good. She enjoys using it.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 109,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Not for Warping!",
+      "review_desc": "Thank you for taking the time to share your experience with this product. We're sorry it didn't meet your expectations, and we see that one of our Customer Care Agents was able to assist you with a return. Your satisfaction is important to us!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 110,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Okay for the price",
+      "review_desc": "Thank you for taking the time to share your candid feedback. We're sorry to hear that this warp didn't work out well for you, and it's not our intention that you ever be disappointed in a Blick purchase. You didn't provide a contact email, but please do give us a call at 1-800-723-2787. Your satisfaction is important to us!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 111,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "yes",
+      "review_desc": "The product is very nice. The delivery very slow.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 112,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Snap Crackle POP",
+      "review_desc": "We're sorry to hear that the quality of the Trait-Tex Cotton Warp was not as you expected, and we're happy to help with a return or exchange. One of our Customer Care Agents has emailed you to assist, and you can always give us a call at 1-800-723-2787. We want you to be satisfied with your purchases from Blick!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 113,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Breaks easily",
+      "review_desc": "We're sorry that the 10/2 warp didn't meet your needs in the classroom. If you would ever like assistance or advice regarding a product you're considering purchasing from us, please know that our Product Information Team is here to help. Just call 1-800-933-2542 (8am-5:30pm CST M-F) or email info@dickblick.com.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 114,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Great for Classroom Use",
+      "review_desc": "I used this as the warp yarn for a class project. It was much better quality and stronger than the warp yarn I already had. I ordered the thinner yarn and it has worked great! The kind I used before would sometimes break as students were weaving but this yarn has not.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 115,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Cotton Warp",
+      "review_desc": "This product will do very nicely when I weave my next wall hanging. The cotton is just the right size for the projects that I do.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 116,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "I was happy top recieve exactly what I needed.",
+      "review_desc": "I am teaching a weaving workshop and was happy that I could find exactly what I wanted for the weavings.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 117,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Definitely would buy again",
+      "review_desc": "I would definitely buy it again. I am using it for weaving purposes and it holds up well. It's a little thin but again, still holds up.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 118,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "I will definitely buy more of this!",
+      "review_desc": "It's truly a great product. I love using it!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 119,
+      "product": "Beka Rigid Heddle Loom",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 120,
+      "product": "DMC Mini Weaving Loom",
+      "review_title": "Fantastic",
+      "review_desc": "Fantastic product. #sweepstakes",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 121,
+      "product": "Clover Pom Pom Maker",
+      "review_title": "Perfect every time",
+      "review_desc": "You wouldn't think you'd need one of these, and then you use one and you can't live without them. They're so easy to use and make the most fluffy plush Pom poms without fail! The secret is to wrap them until each side looks like a fat caterpillar, and make sure to snip the threads evenly.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 122,
+      "product": "Clover Pom Pom Maker",
+      "review_title": "Very helpful and easy to use",
+      "review_desc": "Absolutely a lifesaver as I was making decorative Pom Pom garlands. Lots of them",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 123,
+      "product": "Harrisville Designs Friendly Loom",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 124,
+      "product": "Schacht Hand Bobbin Winder and Bobbins",
+      "review_title": "These plastic bobbins are exactly what I needed",
+      "review_desc": "Blick always sends its products quickly and reliably.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 125,
+      "product": "Schacht Hand Bobbin Winder and Bobbins",
+      "review_title": "Beautiful, well built and functional....What a combination!",
+      "review_desc": "The smooth function, combined with an easy to care for maintenance. Makes this beautiful machine an A+ purchase. It adds all my fiber arts materials evenly and quickly onto bobbins. And has a beautiful natural wooden color. I recommend this product highly to anyone who questions me about it.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 126,
+      "product": "Schacht Hand Bobbin Winder and Bobbins",
+      "review_title": "Great bobbin winder!",
+      "review_desc": "Been wanting a real bobbin winder and this one is perfect! Works great and love how it operates!!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 127,
+      "product": "Schacht Cricket Loom Stands",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 128,
+      "product": "Schacht Zoom Loom",
+      "review_title": "Fun portable loom",
+      "review_desc": "The loom is sturdy, easy to hold, and well marked with arrows at the corners. You'll want to keep the box to store it, or find another box for the purpose. Lots of free tutorials online.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 129,
+      "product": "Schacht Zoom Loom",
+      "review_title": "would buy again",
+      "review_desc": "great way to use up odd ends",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 130,
+      "product": "Bucilla All-In-One Loom Kit",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 131,
+      "product": "Beka Weaving Frame",
+      "review_title": "Can't stop weaving!!",
+      "review_desc": "I have made three tapestries in the 7 days I've had this loom. The included tools are great. Weaving has become so much faster and more fun. The frame easily breaks down for storage. Easy to string, sturdy. Can't believe I didn't get one sooner. Highly recommend!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 132,
+      "product": "Beka Weaving Frame",
+      "review_title": "A great beginner loom!",
+      "review_desc": "I had been using a homemade frame loom for nearly ten months because I could only find expensive alternatives online, and I wasn't ready to commit to spending hundreds of dollars on a new loom. I was so happy to find this loom for such a reasonable price! It's so easy to assemble, use, and store. And it comes with a few sturdy tools that every hand weaver could use! I am definitely happy with this purchase.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 133,
+      "product": "Beka Weaving Frame",
+      "review_title": "Perfect for beginning weaving.",
+      "review_desc": "I'm just beginning to weave and the simplicity and ease of this loom is perfect for me. Sturdy once the threads are warped. Good quality. Solid loom.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 134,
+      "product": "Beka Weaving Frame",
+      "review_title": "Excellent Beginner's Loom",
+      "review_desc": "Easy to set up and easy to use! Sturdy and excellent for beginner weaving.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 135,
+      "product": "Beka Weaving Frame",
+      "review_title": "Great beginner's loom!",
+      "review_desc": "I love this little frame loom. It's very sturdy once the warp is on, and I like that it can be disassembled when not in use. Very small footprint. I have zero complaints, and the price was great!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 136,
+      "product": "Beka Weaving Frame",
+      "review_title": "The weaving fram was perfect",
+      "review_desc": "This is my first weaving ,but I have looked at many and this one was just right. I don't have a thing to say about it not being the right loom unless you are looking for something smaller or larger.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 137,
+      "product": "Beka Weaving Frame",
+      "review_title": "Disappointing, Poor Quality",
+      "review_desc": "Thank you for taking the time to share your feedback on this weaving frame. Please know that we do offer a 100% Satisfaction Guarantee, and we're always happy to work with you if you receive a product that you find less than satisfactory. Just give our Customer Care Team a call at 1-800-723-2787.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 138,
+      "product": "Beka Weaving Frame",
+      "review_title": "Simple loom",
+      "review_desc": "I bought this simple little loom to explore my interest in weaving. I thought the price was reasonable and it is very easy to assemble.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 139,
+      "product": "Todd Loom",
+      "review_title": "MFG. should provide better quality control",
+      "review_desc": "Thank you for taking the time to share your feedback with us. We'd like to work with you to resolve this in the best way possible. We hope you'll reach out to our Customer Care Center at 1-800-723-2787 so we can help!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 140,
+      "product": "Todd Loom",
+      "review_title": "I would recommend this again. I don't need another one.",
+      "review_desc": "I like the size, price and and simplicity for a beginner, like me, just to try it. Nice smooth, solid wooden frame.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 141,
+      "product": "Todd Loom",
+      "review_title": "Very poorly made. Going to return.",
+      "review_desc": "We're sorry to hear that this loom didn't meet your expectations, and we see that our Customer Care Team is already working with you on a solution. We appreciate your feedback!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 142,
+      "product": "Todd Loom",
+      "review_title": "I would buy this product again and again",
+      "review_desc": "Product will be used for a weaving project with Veterans",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 143,
+      "product": "Todd Loom",
+      "review_title": "Pleased with purchase0",
+      "review_desc": "Very satisfied. Exactly what I needed for my purposes. Basic loom with adjustability and reasonably priced.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 144,
+      "product": "Todd Loom",
+      "review_title": "Shoddy construction",
+      "review_desc": "Thank you for taking the time to bring these issues to our attention. Our product manager for these looms has been made aware of your comments so we can look into this, and someone from our Customer Care Center will be reaching out to you soon. Thank you for your review!",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 145,
+      "product": "Todd Loom",
+      "review_title": "Perfect for a new experience",
+      "review_desc": "The right gift for people that love textile art.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 146,
+      "product": "Todd Loom",
+      "review_title": "Somewhat frustrated",
+      "review_desc": "Thank you for sharing your feedback with us. A member of our Product Information team would be happy to talk with you about this loom and see if we can assist you with using the larger settings. Product Information can be reached at 1-800-933-2542 or by email at info@dickblick.com.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 147,
+      "product": "Leisure Arts Bracelet Loom",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 148,
+      "product": "Schacht Card Weaving Cards",
+      "review_title": "Good buy",
+      "review_desc": "I always order these cards from Blick. They are the best price, ship fast, and are of good quality.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 149,
+      "product": "Schacht Card Weaving Cards",
+      "review_title": "Would purchase this product from Blick again",
+      "review_desc": "Using this for inkle weaving — most cost-effective compared with other sites.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 150,
+      "product": "Schacht Card Weaving Cards",
+      "review_title": "Great cards",
+      "review_desc": "Great for tablet weaving, I'll definitely purchase more.",
+      "category": "weaving_reviews"
+    },
+    {
+      "id": 151,
+      "product": "Schacht Spinning Wheel Travel Bobbin",
+      "review_title": "",
+      "review_desc": "",
+      "category": "weaving_reviews"
+    }
+  ],
+  "yarn": [
+    {
+      "id": 1,
+      "product": "Caron One Pound Acrylic Yarn",
+      "siteurl": "https://www.dickblick.com/products/caron-one-pound-acrylic-yarn/",
+      "price": "$11.99",
+      "rating": 4.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4kBoZUTEOrPNJrFS7qb8To/1607df49797079afab442cb5f8fc7a5a/65230-5160-M-4ww.jpg?fit=pad",
+      "descr": "This 4-ply, 100% acrylic knitting yarn is machine washable, non-allergenic, and moth-proof. Its greatest feature is consistent color, because there is no dye lot! Each convenient pull skein contains 1 lb (454 gr). Comes with two free patterns on the wrapper.\n...",
+      "price_range": "$11.99",
+      "category": "yarn"
+    },
+    {
+      "id": 2,
+      "product": "Red Heart Super Saver Yarn",
+      "siteurl": "https://www.dickblick.com/products/red-heart-super-saver-yarn/",
+      "price": "$6.49",
+      "rating": 4.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5peJPOcMBJXcxzaVqi6t3W/068f6b849930f39dc2b41c764654131c/65267-Group-1-4ww.jpg?fit=pad",
+      "descr": "Projects made with this durable, worsted weight, 4-ply yarn will stand up over time. The yarn is mac...",
+      "price_range": "$6.49",
+      "category": "yarn"
+    },
+    {
+      "id": 3,
+      "product": "Maysville Cotton Warp",
+      "siteurl": "https://www.dickblick.com/products/maysville-cotton-warp/",
+      "price": "$11.67",
+      "rating": 4.8,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3mpRRhiDDIT32tPJm7ZwbB/bf4695d46aad18b172584eac21ce052b/62800-group3ww-l.jpg?fit=pad",
+      "descr": "This sturdy classic cotton yarn is versatile and economical, time tested and proven. It's ideal for the beginning weaver or for rag rugs, runners, towels, placemats, and more. It is made from 100% U.S.-grown and dyed cotton. The four-ply, strong, durable warp comes in 8 oz, 800-yard ...",
+      "price_range": "$11.67",
+      "category": "yarn"
+    },
+    {
+      "id": 4,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "siteurl": "https://www.dickblick.com/products/lily-sugar-n-cream-yarn/",
+      "price": 3.14,
+      "rating": 4.8,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3gqcTUbaaFJbRqgtBwiMYJ/984005969fdf04dbccfdb66f47aeb81c/65236-1190-4ww.jpg?fit=pad",
+      "descr": "Naturally soft and absorbent, it's ideal for knitting, crocheting, and craft projects such as vests, sweaters, caps, and lightweight throws. The yarn is machine washable an...",
+      "price_range": "$2.99 - $3.29",
+      "category": "yarn"
+    },
+    {
+      "id": 5,
+      "product": "Classroom Yarn Assortments",
+      "siteurl": "https://www.dickblick.com/products/classroom-yarn-assortments/",
+      "price": "$34.75",
+      "rating": 3.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/27BmtUutEIjyjYXwTFfkWL/299c12ef0629e82dbbafa79c61984e92/65208-1005-3-4ww.jpg?fit=pad",
+      "descr": "Each assortment contains 5 lb (2.3 kg) of yarn. Colors may vary...",
+      "price_range": "$34.75",
+      "category": "yarn"
+    },
+    {
+      "id": 6,
+      "product": "Caron Simply Soft Yarn",
+      "siteurl": "https://www.dickblick.com/products/caron-simply-soft-yarn/",
+      "price": 5.14,
+      "rating": 4.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5GPEJX7iWKpXFQDBHt4FSa/8ea2104fee2c11df2e91f4b3b7e4a060/65248-2980-M-4ww.jpg?fit=pad",
+      "descr": "Wrap yourself in the comfort and luxury of ever-popular Caron Simply Soft Yarn. This premium 100% acrylic yarn has a beautiful luster, sheen, and drape. Incredibly soft to the touch, this versatile #4 worsted-weight yarn is perfect for everything from sweaters and throws to baby knits. And be...",
+      "price_range": "$4.29 - $5.99",
+      "category": "yarn"
+    },
+    {
+      "id": 7,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-retro-velvet-yarn/",
+      "price": "$9.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5iDgbFMccW7k7pdgRdLbPE/ceabba31e3f3429fbfe90fa9ded50556/65294-7050-M-4ww.jpg?fit=pad",
+      "descr": "The 10 oz (283.5g) skeins are 306 yds (280 m) long...",
+      "price_range": "$9.99",
+      "category": "yarn"
+    },
+    {
+      "id": 8,
+      "product": "Premier Yarn Basix Chenille Brights Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-basix-chenille-brights-yarn/",
+      "price": "$4.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/46k3z5WLYD3FnxyybgWouc/1e523a2baa997f2f367035e2c51ae504/65402-group-4ww.jpg?fit=pad",
+      "descr": "Easy to work with and unbelievably soft, Premier Yarn Basix Chenille Brights Yarn is perfect for knitting or crocheting snuggly blankets, plush amigurumi, huggable toys, and more. The #6 super bulky weight helps projects come together quickly and easily in a variety of vibrant hues and pastel colors...",
+      "price_range": "$4.99",
+      "category": "yarn"
+    },
+    {
+      "id": 9,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-ferris-wheel-yarn/",
+      "price": "$4.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2RHCxt8TxxLpq36XNRx9Xb/da9c852f82a51599e75de9c0b5dae161/62819-1006-M-4ww.jpg?fit=pad",
+      "descr": "Knit colorful accessories with Lion Brand Ferris Wheel Yarn. This 100% acrylic self-stripping roving yarn is lightweight, super soft, and creates a subtle ombré effect. The 3 oz (85 g) cakes have 270 yds (247 m) of yarn, the perfect amount to knit a scarf or a hat and wrist warmer ...",
+      "price_range": "$4.99",
+      "category": "yarn"
+    },
+    {
+      "id": 10,
+      "product": "Premier Yarn Basix DK Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-basix-dk-yarn/",
+      "price": "$3.26",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/nQ73odvpEhXQTv2xcmhtG/ec9d2934f57660686f8d8d37919d5acb/65408-group-1-4ww.jpg?fit=pad",
+      "descr": "The sheer range of colors offered by Premier Yarn Basix DK Yarn inspires creative projects of all types. This lightweight 100% acrylic yarn works up nicely into beautiful cabled scarves, lacy shawls, trendy cardigans, and more—whether you keep them for yourself or gift them to others is up to you! ...",
+      "price_range": "$3.26",
+      "category": "yarn"
+    },
+    {
+      "id": 11,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-247-cotton-yarn/",
+      "price": "$5.76",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2A8wx6756TYyzPoQ9R9nsi/7ad952a9f35b48e6c4803eab576c3d1e/62862-1007-M-4ww.jpg?fit=pad",
+      "descr": "Flex your creative powers making cool and stylish projects with Lion Brand 24/7 Cotton Yarn. This worsted-weight yarn is made of 100% mercerized cotton which gives it a beautiful color and sheen that holds up even after multiple washes. This natural fiber yarn is excellent for sweaters, skirts, hats...",
+      "price_range": "$5.76",
+      "category": "yarn"
+    },
+    {
+      "id": 12,
+      "product": "Bernat Blanket Yarn",
+      "siteurl": "https://www.dickblick.com/products/bernat-blanket-yarn/",
+      "price": "$12.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/7iOfulhdGzkqGkvx4XUXMX/39f4a1bac55999417c42ff7ef1743062/62875-6420-M-4ww.jpg?fit=pad",
+      "descr": "Add a luxurious finish to your knit, crochet, and home décor projects with Bernat Blanket Yarn. This extra-cozy chenille-style yarn is available in a range of colors and is ideal for scarves, caps, shawls, blankets, throws, pillows, and more. The #6 super bulky weight stitches up quickly, and its ec...",
+      "price_range": "$12.99",
+      "category": "yarn"
+    },
+    {
+      "id": 13,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-wool-ease-yarn/",
+      "price": "$5.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6yoiurPPofHVUOQRxAQ78D/5feb611a9a07d203da5cbb3189446dea/65247-1060-M-4ww.jpg?fit=pad",
+      "descr": "Combining the softness, warmth, and feel of wool with the easy care of acrylic, this 4-ply, worsted-weight yarn is beloved by knitters and crocheters for its versatility and value. Lion Brand Wool-Ease Yarn is offered in an extensive range of colors and blends — perfect for every project from socks ...",
+      "price_range": "$5.99",
+      "category": "yarn"
+    },
+    {
+      "id": 14,
+      "product": "Harrisville Designs Yarn Packs",
+      "siteurl": "https://www.dickblick.com/products/harrisville-designs-yarn-packs/",
+      "price": "$17.96",
+      "rating": 4,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/fbF189I2tL77MY4plTmK8/1175a1e2b50a478d439071968c907569/65288-3710-1-4ww.jpg?fit=pad",
+      "descr": "Create unique tapestry designs with Harrisville Designs Yarn Packs. Ideally suited for weaving on Harrisville Designs Lap Looms, and other types of looms, these skeins are grouped in specific colorways to create cohesive projects. Each set includes five skeins of colored 100% wool yarn and on...",
+      "price_range": "$17.96",
+      "category": "yarn"
+    },
+    {
+      "id": 15,
+      "product": "Premier Yarn Chunky Cotton Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-chunky-cotton-yarn/",
+      "price": "$5.53",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2lQkKl0eqsNPxlnKFGefUg/96dfb2594901cd9eb3196850b899d5b6/62867-8170-M-4ww.jpg?fit=pad",
+      "descr": "Thick and luxurious, your projects made from Premier Yarn Chunky Cotton Yarn are bound to be your favorites! This 100% cotton, #6 super bulky yarn works up fast for quick projects and is ultra soft. Sweaters, scarves, hats, accessories, home décor, and other items take on a rich appearance with this...",
+      "price_range": "$5.53",
+      "category": "yarn"
+    },
+    {
+      "id": 16,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-spun-colors-yarn/",
+      "price": "$9.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6GvSkRl2cKcfH4KEhcEg9c/414d00d78d0a610747e43739e07b66a3/62837-8530-M-4ww.jpg?fit=pad",
+      "descr": "This size 4 medium weight yarn is perfect...",
+      "price_range": "$9.99",
+      "category": "yarn"
+    },
+    {
+      "id": 17,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-cotton-fair-yarn/",
+      "price": 6.49,
+      "rating": 4.9,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/1RM44Hud8idm7MynhujtX9/d4a8597360e4ef16990d5af7eba3a950/65297-group-4ww.jpg?fit=pad",
+      "descr": "Knit scarves, hats, gloves, and much more with Premier Yarn Cotton Fair Yarn. The color range is the perfect pallet for crafting accessories for adults, kids, and babies. The 52% cotton/48% acrylic blended yarn is soft and has a good drape. Cotton Fair Yarn comes in apple-shaped skeins that measure ...",
+      "price_range": "$5.99 - $6.99",
+      "category": "yarn"
+    },
+    {
+      "id": 18,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-feels-like-butta-yarn/",
+      "price": "$4.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/5IzRTTqscXPDVxqPcKdmiM/2a82c5749c1896b8e00454b6675b9585/65299-4010-M-4ww.jpg?fit=pad",
+      "descr": "Lion Brand Feels Like Butta Yarn lives up to its name. This medium weight, 100% polyester yarn has the velvety feel of chenille without the challenges of chenille. The line includes the perfect colors for baby blankets, sweaters, hats, and more, plus colors adults will love. Each skein weighs...",
+      "price_range": "$4.99",
+      "category": "yarn"
+    },
+    {
+      "id": 19,
+      "product": "Lion Brand Bonbons Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-bonbons-yarn/",
+      "price": "$7.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/25Bkm9l0UEFXmgAkRGZ4hB/b52f992f204bb29a3c0041bcb1dff945/62847-1003-M-4ww.jpg?fit=pad",
+      "descr": "You’re in for hours of fun with Lion Brand Bonbons Yarn collections. Each collection contains eight mini balls of yarns in eight different shades for a total of 28 yards (26 m). They’re perfect for any project requiring multiple colors, such as amigurumi, kids’ crafts, friendship bracelets, embroide...",
+      "price_range": "$7.99",
+      "category": "yarn"
+    },
+    {
+      "id": 20,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-mandala-bonus-bundle-yarn/",
+      "price": "$14.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3UvxSk8HAbyeMkIlGsOQ77/0ba1c4b9bab3878431ff2845a47dd87b/62853-1005-M-4ww.jpg?fit=pad",
+      "descr": "Wrap up your list of knitting or crochet projects with Lion Brand Mandala Bonus Bundle Yarn. More than 1,000 yards of yarn are packed into these large, multicolored cakes, so you’ll definitely have enough for multiple projects. Make sweaters, shawls, and scarves for family and friends, and then knoc...",
+      "price_range": "$14.99",
+      "category": "yarn"
+    },
+    {
+      "id": 21,
+      "product": "Premier Yarn Fruits Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-fruits-yarn/",
+      "price": "$3.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/7icTsfLOYKZS0PQXgVrdwC/2e9d83fd1aa06ac179276794dc6c44d1/62885-group-4ww.jpg?fit=pad",
+      "descr": "Make your next yarn project an explosion of color and fun with Premier Yarn Fruits Yarn. Available in a vibrant variety of fruit-inspired colors, this self-patterning, acrylic-based sock yarn is plied with a strand of strengthening PBT so your socks may even outlast your shoes! It's also great for m...",
+      "price_range": "$3.99",
+      "category": "yarn"
+    },
+    {
+      "id": 22,
+      "product": "Trait-Tex Cotton Warp",
+      "siteurl": "https://www.dickblick.com/products/trait-tex-cotton-warp/",
+      "price": 10.825,
+      "rating": 3.2,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/7Ma5Kbaf6l62F1qaDH79NS/73547ea33aa5f8d06c4d8001a0c6b317/65211-group3ww-l.jpg?fit=pad",
+      "descr": "100% cotton. Natural color. 8 oz cones.",
+      "price_range": "$10.56 - $11.09",
+      "category": "yarn"
+    },
+    {
+      "id": 23,
+      "product": "Lion Brand Mandala Ombre Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-mandala-ombre-yarn/",
+      "price": "$5.69",
+      "rating": 5,
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2Yu1Thm5vBb4uw2pAnTKsz/9879dd832776cbce208def2a4653e80a/62850-1008-M-4ww.jpg?fit=pad",
+      "descr": "Give your knit and crochet creations the feel of fine merino wool at an affordable price with 100% acrylic Lion Brand Mandala Ombre Yarn. This yarn’s colors gradually blend into each other in both the multicolored and tonal versions. Because some cream color shows through, the yarn looks hand-dyed. ...",
+      "price_range": "$5.69",
+      "category": "yarn"
+    },
+    {
+      "id": 24,
+      "product": "Premier Yarn Sweet Roll Vivid Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-sweet-roll-vivid/",
+      "price": "$5.25",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3Wv5aryTTPTE8jcSfEBp7G/bbd437fa89852ac68d3034e92c758649/02850-group-4ww.jpg?fit=pad",
+      "descr": "With Premier Yarn Sweet Roll Vivid Yarn, your knit and crochet projects are sure to pop. This #4 medium weight, 100% acrylic yarn comes in bright colors and creates a self-striping effect as you work, making it great for scarves, hats, blankets, sweaters, and more. It’s also Standard 100 certified b...",
+      "price_range": "$5.25",
+      "category": "yarn"
+    },
+    {
+      "id": 25,
+      "product": "Lion Brand Re-Spun Bonus Bundle Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-re-spun-bonus-bundle-yarn/",
+      "price": "$8.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/2KzjoKPcQwRtmoAmZCAx2F/f754c7382499f89c361dd1f296c08094/62857-1009-M-4ww.jpg?fit=pad",
+      "descr": "With Lion Brand Re-Spun Bonus Bundle Yarn, your crafting and knitting projects can be both beautiful and environmentally friendly. Re-spun means that it’s made from recycled plastics, but you’d never know by how soft and easy it is to work with. Sweaters, scarves, hats, mittens, and throws will be a...",
+      "price_range": "$8.99",
+      "category": "yarn"
+    },
+    {
+      "id": 26,
+      "product": "Lion Brand Truboo Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-truboo-yarn/",
+      "price": "$5.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/749MOcHcg2qNEe0tsDXWjU/581f0531709dc584b598b8b047a3ce6d/62852-5160-M-4ww.jpg?fit=pad",
+      "descr": "Create beautiful shawls, wraps, sweaters, cardigans, and more with Lion Brand Truboo Yarn. Super soft with a lovely, subtle sheen, this lightweight, 100% rayon yarn made from bamboo has an amazing drape, making it perfect for airy clothing that can take you from spring to summer. Lion Brand Truboo Y...",
+      "price_range": "$5.99",
+      "category": "yarn"
+    },
+    {
+      "id": 27,
+      "product": "Premier Yarn Parfait Chunky Pom Pom Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-parfait-chunky-pom-pom-yarn/",
+      "price": "$6.47",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4MCGBnTLvaPiYROKSZS2BF/81232404e16c51475087eff140b4f437/02875-group-5-4ww.jpg?fit=pad",
+      "descr": "Use the extra soft Premier Yarn Parfait Chunky Pom Pom Yarn to make amigurumi characters, blankets, hats, and more. Made of 85% polyester and 15% polyamide, this #6 super bulky chenille yarn features a nylon pom pom wrap to add some extra color to all your projects. It's also Standard 100 by OEKO-TE...",
+      "price_range": "$6.47",
+      "category": "yarn"
+    },
+    {
+      "id": 28,
+      "product": "Premier Yarn Basix Worsted Yarn",
+      "siteurl": "https://www.dickblick.com/products/premier-yarn-basix-worsted-yarn/",
+      "price": "$4.71",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/4kV6FZ29IW3q4kLZKEbWd6/a83a1bab24dc919b919a5687d5e4052f/65403-group-1-4ww.jpg?fit=pad",
+      "descr": "Premier Basix Worsted Yarn is an economical choice for creating everyday kids’ crafts, creative gifts, and charity projects. It has been thoroughly safety-tested and OEKO-TEX Certified for close contact with sensitive skin, and finished blankets or garments can be machine-washed and tumble-dried for...",
+      "price_range": "$4.71",
+      "category": "yarn"
+    },
+    {
+      "id": 29,
+      "product": "Lion Brand Basic Stitch Anti-Pilling Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-basic-stitch-anti-pilling-yarn/",
+      "price": "$5.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/6eUdpSTcJm66vFJ1JQppfL/309c10ff93c1b2fcf38dd297f6dd2a18/62840-5100-M-4ww.jpg?fit=pad",
+      "descr": "Lion Brand Basic Stitch Anti-Pilling Yarn is for projects seeing a lot of wear and tear. Even before it is spun, the premium acrylic fiber is treated to resist pilling. When pills do form (due to frequent use and washing), there’s no need to pick them off — simply throw the item in the washer and th...",
+      "price_range": "$5.99",
+      "category": "yarn"
+    },
+    {
+      "id": 30,
+      "product": "Lion Brand Re-Spun Thick & Quick Yarn",
+      "siteurl": "https://www.dickblick.com/products/lion-brand-re-spun-thick-and-quick-yarn/",
+      "price": "$10.99",
+      "rating": "+ Show More",
+      "imgurl": "https://images.ctfassets.net/f1fikihmjtrp/3yI04AAMxMv7GFTMxUIhko/3697d75352eb2f27b04a8e3c63958d79/62858-1003-M-4ww.jpg?fit=pad",
+      "descr": "With Lion Brand Re-Spun Thick & Quick Yarn, you can feel good about helping the planet while working on your crafting and knitting projects. Made from recycled plastics, this number 6 super bulky yarn isn’t just soft and easy to work with, it helps keep plastic bottles and waste out of our oceans an...",
+      "price_range": "$10.99",
+      "category": "yarn"
+    }
+  ],
+  "yarn_reviews": [
+    {
+      "id": 1,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 2,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "I will continue to purchase this product again & again",
+      "review_desc": "Caron One Pound is my go-to yarn. Lots of colors to choose from & never disappoints in quality or colors.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 3,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great product",
+      "review_desc": "My order came sooner than expected!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 4,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 5,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 6,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 7,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 8,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "I would definitely buy this yarn again!",
+      "review_desc": "I truly love this acrylic yarn over the lesser expensive brand. This does not unwind, pill or degrade as you use it. It is now my #1 yarn in acrylic.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 9,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "I Would Buy This Yarn Again",
+      "review_desc": "I'm using this yarn for a crochet project that I'm working on. It's a very good brand of yarn.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 10,
+      "product": "Caron One Pound Acrylic Yarn",
+      "review_title": "I would but yarn again",
+      "review_desc": "Great price and deluvery",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 11,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 12,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 13,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 14,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 15,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 16,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 17,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 18,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 19,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "I WOULD DEFINITELY BUY AGAIN!!!",
+      "review_desc": "SUCH A BEAUTIFUL COLOR I USE IT TO MAKE A RUFFLE CROCHET HAT AND IT TURN OUT PERFECT AND I SOLD IT THE PERSON THE BOUGHT IT LOVE THE COLOR SO MUCH. Check out my crochet account on instagram which is ahaliyah._ thank you blick!!. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 20,
+      "product": "Red Heart Super Saver Yarn",
+      "review_title": "cheap and good",
+      "review_desc": "It's very cheap with different colors to. Also has good quality",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 21,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I will be buy this again.",
+      "review_desc": "this is one of my favorites!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 22,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving.",
+      "review_desc": "Love the green color. A nice rich green",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 23,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving.",
+      "review_desc": "A nice deep color, better than white or off white. Great for weaving.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 24,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Nice rich cotton, great for warp material",
+      "review_desc": "A nice rich red color. Great for the warp for weaving.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 25,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for weaving / warp",
+      "review_desc": "Nice rich color, great for weaving warp",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 26,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I would buy this again and plan to use it for my warp",
+      "review_desc": "Nice color, sturdy and can't beat the price",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 27,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Nice 8/4",
+      "review_desc": "Beautiful color, great quality and right price.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 28,
+      "product": "Maysville Cotton Warp",
+      "review_title": "I will buy this again.",
+      "review_desc": "Love weaving with this cotton yarn.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 29,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Best carpet warp around",
+      "review_desc": "The best carpet warp around. This yarn is perfect for all weaving projects, carpets or not!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 30,
+      "product": "Maysville Cotton Warp",
+      "review_title": "Great product!",
+      "review_desc": "This was a recommended product. Great price. I would buy again.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 31,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 32,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 33,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great value",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 34,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great value",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 35,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great value",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 36,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 37,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Always have need for Sugar 'N Cream yarn",
+      "review_desc": "Happy to find the Sugar 'n Cream yarn that I use in several of my projects. Out local stores carry little if any of this kitchen cotton at this time, with few color choices when they do. Was great to find a supply and to have colors needed available.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 38,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Always have need for Sugar 'N Cream yarn",
+      "review_desc": "Happy to find the Sugar 'n Cream yarn that I use in several of my projects. Out local stores carry little if any of this kitchen cotton at this time, with few color choices when they do. Was great to find a supply and to have colors needed available.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 39,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 40,
+      "product": "Lily Sugar 'N Cream Yarn",
+      "review_title": "Great yarn",
+      "review_desc": "Great quality...true shade of color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 41,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Amazing Yarn Art!",
+      "review_desc": "This yarn is amazing! The variety of colors and materials make it so textural and interesting for any kind of string art, which is what my class is using it for. It adds lots of design detail for their string art. Hopefully we will win one of the sweepstakes prizes (#sweepstakes) so we can get some more of it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 42,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "nice material",
+      "review_desc": "This yarn is thinner than I thought, but will work for yarn painting.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 43,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Good yarn for adding texture",
+      "review_desc": "This yarn assortment is very thin with a variety of texture. There are some projects that it would work for, but it is not great for beginning weavers. It seems more like an assortment of yarn that people didn't want.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 44,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "This product is exactly what was advertised!",
+      "review_desc": "This product was used for a knitting class for Veterans in New York. It was a big hit! They loved it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 45,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Not quite what I was expecting",
+      "review_desc": "So, I was assuming this would be a variety of plain old weighted acrylic and wool yarn. Instead I got at least 6 rolls of novelty yarn in the bundle, mostly all the same except in different colors, which I can't use for crochet like I was hoping. Not a single one of these is a standard mid or large weighted yarn. Luckily most of them have been okay for needle punch, but I can't recommend this if you're hoping to get yarn for crochet/knitting.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 46,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "I WILL NOT BUY THIS AGAIN!!",
+      "review_desc": "We apologize that the yarn you received didn't meet your expectations. As always, if you should ever receive merchandise that isn't as expected, we'll be glad to work with you to arrange a return or replacement. Please call our Customer Care Center at 1-800-723-2787 and we'll be happy to help you!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 47,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Great product. Delivered quickly.",
+      "review_desc": "I will shop here again.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 48,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Very nice assortment of colors",
+      "review_desc": "I wasn't sure what to expect when I ordered it. I received 10 skeins, 8 of which I have plans for. The other 2 are more thread than yarn but if I taught I am sure I could find multiple uses for it.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 49,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Great variety!",
+      "review_desc": "I just started weaving and I love the variety of colors and textures in this assortment.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 50,
+      "product": "Classroom Yarn Assortments",
+      "review_title": "Great assortment for a good price!",
+      "review_desc": "Ordered this for a number of crochet projects I had. I know it's a classroom assortment but didn't realize how much variety would be included. While I may not be able to use some of them due to the varying textures, I really appreciate how much this can be used for classroom projects. And my crochet projects are going to be super cool for the gifts I'm making. Would recommend for teachers and anyone who works in costuming/set design. This stuff is amazing and creative!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 51,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Nice feel",
+      "review_desc": "Blankets",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 52,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Soft and Silky",
+      "review_desc": "I love this yarn and the color is gorgeous.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 53,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "I would buy again",
+      "review_desc": "Love the gray color",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 54,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Order processing slow. Price good.",
+      "review_desc": "The product I ordered was high quality. It did take a number of days for the order itself to be processed. Once the order was filled, however, shipping time was reasonable.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 55,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Blick has Rare Colors!",
+      "review_desc": "I love Caron Simply Soft yarn for how, well, soft it is; I keep saying that once you go soft you don't go back. The colors I purchased are difficult to find; I hadn't even heard of most of them until I looked on Blick. And I'm very happy with them!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 56,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Very soft, good quality, lots of colors",
+      "review_desc": "Product arrived ahead of schedule, yay! Made a baby blanket; very soft. Very pleased with yarn. I make lots of afghans, some scarves, ponchos. This is the only brand yarn I will use!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 57,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Great Product and Price",
+      "review_desc": "Blick has consistently had the exact brand and color of yarn that I wanted at a reasonable price when I was unable to find it elsewhere. I will definitely return over and over!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 58,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Excellent Service",
+      "review_desc": "The yarn arrived well packaged and it perfect condition. It was exactly what I wanted for a gift for a friend. Thank you..",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 59,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Best General Yarn",
+      "review_desc": "Absolutely perfect for my charity knitting - doesn't come any better.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 60,
+      "product": "Caron Simply Soft Yarn",
+      "review_title": "Love the yarn!",
+      "review_desc": "I needed at least one skein to finish a baby afghan. I found the correct kind with the same label as I had already. I was thrilled. I looked for a long time for a match and found it on your website.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 61,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Super Fun Yarn!",
+      "review_desc": "This yarn is soft and the gorgeous color makes it so textural and interesting for any kind of string art, which is what my class is using it for. It adds lots of design detail for their string art. Hopefully we will win one of the sweepstakes prizes (#sweepstakes) so we can get some more of it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 62,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Beautiful color",
+      "review_desc": "Beautiful color. It made a beautiful and very soft crocheted blanket.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 63,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Soft and easy to use",
+      "review_desc": "Using this yarn to make a blanket for Christmas. Chose to go this route because the brand carried in the local store didn't have a plain red option. Really enjoying working on this project and looking forward to using it again.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 64,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Sooo soft!",
+      "review_desc": "I love this yarn! It is so soft and warm. I've used it numerous times and have gifted several to family. This color is gorgeous! Started a project right away.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 65,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Love Retro Velvet Yarn",
+      "review_desc": "I was surprised at the quality of yarn. It's extremely easy to work. Your project goes along quickly. The feel is fabulous.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 66,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Excellent product and surpassed delivery!",
+      "review_desc": "I was in search of the perfect color and texture of yarn for an aphgan. I purchased the Retro Velvet red. I normally purchase Bernat. The Retro is so comparable! Blick Art is the only place who was able to provide the color II needed at an affordable price. Not to mention the surprise of a speedy delivery. I will continue to use Blick for my future projects. A one stop shop for all your Art and Craft needs!!!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 67,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "The worst velvet I have ever used!!",
+      "review_desc": "We're sorry to learn that this yarn isn't performing as we would expect. We're happy to work with you to make this right. One of our Customer Care Representatives has reached out via email to assist.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 68,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Love this yarn!",
+      "review_desc": "The quality of this yarn is amazing!! It works up smoothly and doesn't fall apart if you have to rip out stitches.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 69,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "I will buy this product again and again. It's easy to work.",
+      "review_desc": "I made 25 Afghans asa well as hats and scarves. Wish there were more colors available. I gave them all as gifts this weekend",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 70,
+      "product": "Premier Yarn Retro Velvet Yarn",
+      "review_title": "Wonderful",
+      "review_desc": "I use this velvet yarn to make scrunchies and they look nice and fluffy. Great colors too",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 71,
+      "product": "Premier Yarn Basix Chenille Brights Yarn",
+      "review_title": "I love it it's soft and it's cheap for the quality",
+      "review_desc": "I made an straw berry turtle",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 72,
+      "product": "Premier Yarn Basix Chenille Brights Yarn",
+      "review_title": "Best Yarn for Plushies!",
+      "review_desc": "Premier Yarn Basix Chenille Brights is the best yarn for plushies. It is much softer and easier on your hands than Bernat Blanket yarn. It is more durable and doesn't shed like Premier Parfait Chunky. I highly recommend this yarn. I love it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 73,
+      "product": "Premier Yarn Basix Chenille Brights Yarn",
+      "review_title": "Best Yarn for Plushies",
+      "review_desc": "I love Premier Basix Chenille Brights for plushies. It is much softer and easier on your hands than Bernat Blanket yarn. It is also much more durable than Premier Parfait Chunky. It has very little to no shedding.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 74,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "So pretty this yarn!",
+      "review_desc": "This is my first time in 40 years crocheting a blanket and this yarn is wonderful! It blends so nice and the colors change often. Love it. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 75,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "I would buy this yarn again and I have.",
+      "review_desc": "I purchased Ferris Wheel Summer Day to crochet a sweater. I love the color mix and the yarn feels soft. The yarn is easy to work with, but the fibers snag a little when stitches are frogged back. Nothing that can't be dealt with though.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 76,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "Cool Colors and Great Quality",
+      "review_desc": "This yarn is colorful and fun. Great for weaving projects in the classroom! #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 77,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "Soft Yarn",
+      "review_desc": "Great yarn! Colors a little darker than pictured but still beautiful. Very soft!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 78,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "Lovely product but with some reservations",
+      "review_desc": "I used the yarn to knit a pullover. The colors are great and they fade into one another beautifully. The yarn, however, does tend to split while one's knitting with it, and it also shreds some, so you do have to be careful working with it. It's worth the effort.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 79,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "Blick had best price & yarn in stock.",
+      "review_desc": "I use this in my business",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 80,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "I received my order as expected. Easy to order.",
+      "review_desc": "Great variety of yarns. All in stock which is hard to find lately. Arrived as expected. Packed well.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 81,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "Love this yarn",
+      "review_desc": "I love this yarn! The color changes gradually and fairly frequently (several yards of each color before it changes). It is soft a little frizzy which I like, though it is a little delicate as yarn goes--can be easily broken if you pull really hard and the frizziness makes it a little hard to undo stitches.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 82,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "yes,",
+      "review_desc": "I knit and donate chemo caps to hospital oncology departments. this yarn had great color waves, very soft and machine washable, and wonderful customer service!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 83,
+      "product": "Lion Brand Ferris Wheel Yarn",
+      "review_title": "I will definitely buy this yarn again.",
+      "review_desc": "I purchased 3 colors to crochet 3 sweaters for children in the family. Colors are great, and it is very easy to work with. Yarn does not twist or split, feels like wool, is super soft, and holds the garment shape beautifully. One of my favorite yarns to work with!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 84,
+      "product": "Premier Yarn Basix DK Yarn",
+      "review_title": "Love this product!",
+      "review_desc": "First time using this yarn. Very soft and a nice color. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 85,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "Great yarn with a nice range of colors",
+      "review_desc": "This yarn is a nice quality for the price. Being a bit thinner than the pima cotton, it seems to be user-friendly but more sophisticated for my students with a little more experience in fiber arts. The colors are vibrant and contrast well for stunning crochet work, and is less prone to splitting than the pima yarn.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 86,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "Great Service",
+      "review_desc": "Used for making Valentine's gifts. Good value and quality:",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 87,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "I highly recommend",
+      "review_desc": "I am using this for a lap blanket. The color is beautiful. The texture is excellent. Very easy to work with.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 88,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "As advertised",
+      "review_desc": "Crochet",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 89,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "Rough",
+      "review_desc": "it's nice color, although it feels a little rougher than acrylic yarn. Is that normal for cotton yarn? I've never used cotton yarn before, so I don't know if it being rough is normal.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 90,
+      "product": "Lion Brand 24/7 Cotton Yarn",
+      "review_title": "Lovely!",
+      "review_desc": "going to use this to make dishclothes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 91,
+      "product": "Bernat Blanket Yarn",
+      "review_title": "This yarn is amazing",
+      "review_desc": "Incredibly Soft. My sister is going to love the dinosaur I made for her from this!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 92,
+      "product": "Bernat Blanket Yarn",
+      "review_title": "Very soft and cozy",
+      "review_desc": "This yarn is so soft and cozy and is going to make the perfect blanket for my mom for her birthday. The yarn does have a tendency to twist, but for my pattern it doesn't make a huge difference. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 93,
+      "product": "Bernat Blanket Yarn",
+      "review_title": "I would and have bought these blanket yarns repeatedly",
+      "review_desc": "Bernat Baby Blanket yarn is wonderfully soft, chemical free, and everyone I've made a blanket for loves it. Two things to keep in mind: 1. Baby Blanket and regular blanket yarns are not exact matches of the same color. Baby Almond is lighter than regular Almond. The whites need to be carefully matched as they are all different by just a fine shade—Vintage White, Vanilla, Blush, and White are not the same. 2. Save the specialty stitches for other thinner yarns. You can try them with this chunky yarn, but they won't show the way you think they will. So, enjoy these wonderful items, but try to make sure the colors go well together, and buy all that you need before you start! Have fun!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 94,
+      "product": "Bernat Blanket Yarn",
+      "review_title": "I will buy this again",
+      "review_desc": "I crochet blankets. material is very soft. LOVE IT !!!!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 95,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Good product, unfortunate HI shipping",
+      "review_desc": "Knits up well, color is consistent with picture. Product could have easily been packed more economically and not have had an added charge for HI shipping. It was NOT fragile, and did NOt meed a box!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 96,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Warm and fuzzy",
+      "review_desc": "Nice and warm, love how quickly this works up since it is a bulky yarn. Beautiful dark purple color #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 97,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Works Great with My Addi Express!",
+      "review_desc": "I knit double thick cuffed beanies for the unhoused neighbors in my community, using an Addi Express. Each beanie uses one skein. Wool-Ease is the only yarn I have ever used. My Addi works great with it. Tip: Every skein or two, rub down the machine with a cloth with a little squirt of food grade silicone spray on it to reduce static build-up that can cause split or dropped stitches. We like the 20% wool in the hope that it will help add some warmth when the weather is wet. The recipients really like their beanies. We wish that Blick would carry a chocolate brown, as the umber is too pale for our purposes. Our recipients currently like choosing among black, nightshade, forest heather, flint, and tawny port, and would love to have chocolate brown too. We are very grateful that you offer this yarn at such a good price, and hope you will continue to do so.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 98,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Deal",
+      "review_desc": "At the price, best deal on yarn I've seen in awhile.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 99,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Lion Brand WoolEase",
+      "review_desc": "I have used this product before to crochet a tunic and it turned out really beautiful. There were 2 skeins left and now I am using it to knit a sweater. Almost finished and I love how this is working out. The color is soft and the finished garment will be soft too.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 100,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "I will continue to use Lion brand Wool-Ease.",
+      "review_desc": "I have been knitting with Wool-Ease yarn for years and it is the greatest. Have had many compliments re: the softness and medium warmth of this product. I will continue to use this yarn for all my knitting projects. Tell all your yarn users about it.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 101,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Nice yarn for beginners",
+      "review_desc": "Easy to knit with on Aluminium or wood needles. Doesn't snag or feel rough to the skin.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 102,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "I bought four of these and it was a great choice",
+      "review_desc": "Great for knitting! Super soft and vibrant and the thinking is always consistent.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 103,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Love this",
+      "review_desc": "Knit a shawl",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 104,
+      "product": "Lion Brand Wool-Ease Yarn",
+      "review_title": "Beautiful yarn, wonderful quality.",
+      "review_desc": "Beautiful yarn. Lovely heathery color, easy to knit with.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 105,
+      "product": "Harrisville Designs Yarn Packs",
+      "review_title": "Liked the colors",
+      "review_desc": "Like that the colors were a little different in texture and thickness",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 106,
+      "product": "Harrisville Designs Yarn Packs",
+      "review_title": "Like the colors but might not select a collect again",
+      "review_desc": "New to weaving so didn't know how much yarn I would need. The one problem I have with the collection was you don't get an even amount of each color and I would have chosen a different distribution of the colors. I like the quality of the yarn. Not a lot of yarn enough for one project which I think is fair for the cost.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 107,
+      "product": "Premier Yarn Chunky Cotton Yarn",
+      "review_title": "Would by again",
+      "review_desc": "Great yarn — just started my project a throw blanket",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 108,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "I will buy again.",
+      "review_desc": "Love it. Works up beautifully.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 109,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Great product!",
+      "review_desc": "Made beautiful slippers!!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 110,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "I love this yarn.",
+      "review_desc": "This yarn was cheaper here at than anywhere else.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 111,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Need more",
+      "review_desc": "I live the rich color and texture. Great for Afghans. I had bought what I could elsewhere but could not get the quantity I need. I was surprised to see it here, and bought everything I could. Love the color patterns and variety. Love this yarn",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 112,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Beautiful Colors!",
+      "review_desc": "I'm using this yarn to make my sister a blanket. It's really soft and the colors are beautiful!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 113,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Amazing Value",
+      "review_desc": "This yarn feels and crochets like really expensive merino! The colors (I bought Poppy)are stunning--no monitor could do them justice! What a joy to work up and to wear.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 114,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Nice yarn. Great price.",
+      "review_desc": "Although labeled as a #4 weight yarn, I'd say it's more of a #3 in most places, with a few thicker areas, as is the nature of single spun yarn. It's very soft, knits well, a lot of yardage for the price, and fiber content. It also washes up well. The colors are very vibrant and has a slight satiny shine.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 115,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Wonderful Roving Yarn!",
+      "review_desc": "This is a great deal for the yardage you get. The color is saturated and beautiful. The yarn is roving, so it does tend to go thick and thin but the project does come out very well because of the quality of the yarn. I would rate this about the same as Unforgettable or similar - it is about that thickness and that saturation of color. On the thin parts I have not had it separate at all, it is strong and spun well. I would recommend this highly. I bought the Agate for a project I am doing for a friend but will buy some for a blanket for myself. This is soft and has a wonderful hand. (Pic is the start of my project)",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 116,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Great yarn, very soft, beautiful colors.",
+      "review_desc": "Used this yarn to make a poncho.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 117,
+      "product": "Premier Yarn Spun Colors Yarn",
+      "review_title": "Hard to find yarn! Nice price with fassst shipping =:)",
+      "review_desc": "Extremely hard to find colorway in this yarn. Sooooo glad to have found it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 118,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "I always buy it",
+      "review_desc": "Love this yarn❤️!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 119,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Great consistent product.",
+      "review_desc": "I make amigurumi and this yarn works up wonderfully.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 120,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Wonderful!",
+      "review_desc": "I love the texture and weight of this yarn for light weight shawls.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 121,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "yes",
+      "review_desc": "I made a shall for a gift and its wonderful.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 122,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Love the brand",
+      "review_desc": "Great color selection, perfect yarn for many projects, price is great for quality and yardage.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 123,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "found hard to find crochet cotton here.",
+      "review_desc": "ive bought out all the local stores and finally found it on this site. saved a big project",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 124,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Beautiful yarn",
+      "review_desc": "I love this brand of yarn because all projects look amazing.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 125,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Make soft & beautiful things with Premier Yarns Cotton Fair!",
+      "review_desc": "You can create beautiful designs with Premier Yarns Cotton Fair! Amazing colors for afghans, pillows, blankets, sweaters, etc.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 126,
+      "product": "Premier Yarn Cotton Fair Yarn",
+      "review_title": "Super soft, squishy yarn -- LOVE IT!",
+      "review_desc": "This is the softest cotton yarn I have ever seen. I can't wait to cast on some Summer tank tops using this yarn 😄.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 127,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "One of many!",
+      "review_desc": "I don't crochet with anything else! My afghans are epic!!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 128,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "Best yarn ever!!",
+      "review_desc": "This yarn makes the softest baby blankets ever!!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 129,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "I would buy again...",
+      "review_desc": "Love it, just wish it was less expensive",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 130,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "Love this yarn",
+      "review_desc": "It is spool soft",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 131,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "I bought some of this yarn over a year ago to make a baby b.",
+      "review_desc": "I have only one thing I dislike about this yarn is they need more colors!! I use it for all my projects where I can choose my yarn! And they have all turned out to be incredibly soft with just the right density to keep you warm",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 132,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "Burt's no",
+      "review_desc": "Bought this and love the feel. Have not yet started my project and will be interested in the ease of working this yarn.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 133,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "Really is the softest possible yarn!",
+      "review_desc": "I needed this for a custom scarf, this was the cheapest place to get it and I even bought extra colors for myself lol",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 134,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "So Soft",
+      "review_desc": "Making a pocket scarf and this is so soft!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 135,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "This yarn disappointed",
+      "review_desc": "Thank you for taking the time to share your feedback with us. We'd like to work with you to resolve this in the best way possible. We hope you'll reach out to our Customer Care Center at 1-800-723-2787 so we can help!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 136,
+      "product": "Lion Brand Feels Like Butta Yarn",
+      "review_title": "I plan to buy this product again",
+      "review_desc": "The yarn is perfect for baby blankets and other baby items.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 137,
+      "product": "Lion Brand Bonbons Yarn",
+      "review_title": "I would buy this again.",
+      "review_desc": "I bought several of these pkgs. of yarn to make the tooth fairy pillow. They are for several grandchildren. Can't wait to give them the finished product. Thanks for carrying these packages, just enough yarn to complete the project with no waste. Thank you.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 138,
+      "product": "Lion Brand Bonbons Yarn",
+      "review_title": "I'll be buying this product for all my small yarn projects.",
+      "review_desc": "The colors were perfect and looked just as vibrant as they did in the picture.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 139,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "Good quality for a good price",
+      "review_desc": "Nice lighter weight yarn, vivid colors. This was my first time buying such a large cake, so I was thinking the stripes would be much closer together, but this makes a very nice ombre effect. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 140,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "Beautiful and soft.",
+      "review_desc": "Absolutely gorgeous colors. More than enough to weave the baby blanket I wanted.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 141,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "Only place to purchase exactly what I wanted!",
+      "review_desc": "Could not find this exact Lion Brand Mandala color Meowth yarn except at Blick! Thank you! And have now bought another color of the same brand from you! Thank you again! Shipping was very fast! I am very, very satisfied with the experiences at Blick!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 142,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "Would definitely buy this again!",
+      "review_desc": "Product was shipped quickly and was in excellent condition, al individually sealed and protected. Love this product! Perfect colorway for my project!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 143,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "Lovely yarn!",
+      "review_desc": "Beautiful yarn & it was shipped quickly! I was pleasantly surprised that Dick Blick sold yarn! Couldn't be happier shopping here!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 144,
+      "product": "Lion Brand Mandala Bonus Bundle Yarn",
+      "review_title": "I have bought this more times than I can count.",
+      "review_desc": "Great size 3 yarn (DK/light) from Lion Brand. Not as soft as their Cupcake yarn once was (discontinued) but it is close. Have bought it 20+ times for shawls, sweaters, scarves, hats, and mitts.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 145,
+      "product": "Premier Yarn Fruits Yarn",
+      "review_title": "Very Nice Yarn",
+      "review_desc": "Vibrantly colored and deliciously soft and squishy with just the right amount of stretch. They'll make wonderful socks.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 146,
+      "product": "Premier Yarn Fruits Yarn",
+      "review_title": "Great yarn for crochet",
+      "review_desc": "used this as part of a crochet project, worked great.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 147,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Not for Warping!",
+      "review_desc": "Thank you for taking the time to share your experience with this product. We're sorry it didn't meet your expectations, and we see that one of our Customer Care Agents was able to assist you with a return. Your satisfaction is important to us!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 148,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Okay for the price",
+      "review_desc": "Thank you for taking the time to share your candid feedback. We're sorry to hear that this warp didn't work out well for you, and it's not our intention that you ever be disappointed in a Blick purchase. You didn't provide a contact email, but please do give us a call at 1-800-723-2787. Your satisfaction is important to us!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 149,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "yes",
+      "review_desc": "The product is very nice. The delivery very slow.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 150,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Snap Crackle POP",
+      "review_desc": "We're sorry to hear that the quality of the Trait-Tex Cotton Warp was not as you expected, and we're happy to help with a return or exchange. One of our Customer Care Agents has emailed you to assist, and you can always give us a call at 1-800-723-2787. We want you to be satisfied with your purchases from Blick!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 151,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Breaks easily",
+      "review_desc": "We're sorry that the 10/2 warp didn't meet your needs in the classroom. If you would ever like assistance or advice regarding a product you're considering purchasing from us, please know that our Product Information Team is here to help. Just call 1-800-933-2542 (8am-5:30pm CST M-F) or email info@dickblick.com.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 152,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Great for Classroom Use",
+      "review_desc": "I used this as the warp yarn for a class project. It was much better quality and stronger than the warp yarn I already had. I ordered the thinner yarn and it has worked great! The kind I used before would sometimes break as students were weaving but this yarn has not.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 153,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Cotton Warp",
+      "review_desc": "This product will do very nicely when I weave my next wall hanging. The cotton is just the right size for the projects that I do.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 154,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "I was happy top recieve exactly what I needed.",
+      "review_desc": "I am teaching a weaving workshop and was happy that I could find exactly what I wanted for the weavings.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 155,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "Definitely would buy again",
+      "review_desc": "I would definitely buy it again. I am using it for weaving purposes and it holds up well. It's a little thin but again, still holds up.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 156,
+      "product": "Trait-Tex Cotton Warp",
+      "review_title": "I will definitely buy more of this!",
+      "review_desc": "It's truly a great product. I love using it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 157,
+      "product": "Lion Brand Mandala Ombre Yarn",
+      "review_title": "Best acrylic yarn ever - feels like cotton and silk.",
+      "review_desc": "Have knit sweaters, hats, and scarves with this. Beyond soft, without being mushy. A great value. The changing colors are soft and not solid. The way they blend together is beautiful.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 158,
+      "product": "Premier Yarn Sweet Roll Vivid Yarn",
+      "review_title": "Colorful without a seam!",
+      "review_desc": "Knitting a scarf for a friend for Christmas.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 159,
+      "product": "Lion Brand Re-Spun Bonus Bundle Yarn",
+      "review_title": "Excited to start project",
+      "review_desc": "will be making a shawl. Each skein was individually sealed in plastic which is great. Great color.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 160,
+      "product": "Lion Brand Re-Spun Bonus Bundle Yarn",
+      "review_title": "I love this product",
+      "review_desc": "I used this yarn to make a blanket for my niece. It is soft and easy to work with. Plus it is made from recycled materials. #sweepstakes",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 161,
+      "product": "Lion Brand Re-Spun Bonus Bundle Yarn",
+      "review_title": "Worth every penny!",
+      "review_desc": "If you want something that is as soft as Wool, but a less expensive alternative, this is what you need!!! I mean, it is silky soft, yet fluffy and warm feeling! I hope they expand the color options!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 162,
+      "product": "Lion Brand Truboo Yarn",
+      "review_title": "",
+      "review_desc": "",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 163,
+      "product": "Premier Yarn Parfait Chunky Pom Pom Yarn",
+      "review_title": "Amazing Yarn Art!",
+      "review_desc": "This yarn is soft and the little flecks of color make it so textural and interesting for any kind of string art, which is what my class is using it for. It adds lots of design detail for their string art. Hopefully we will win one of the sweepstakes prizes (#sweepstakes) so we can get some more of it!",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 164,
+      "product": "Premier Yarn Basix Worsted Yarn",
+      "review_title": "",
+      "review_desc": "",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 165,
+      "product": "Lion Brand Basic Stitch Anti-Pilling Yarn",
+      "review_title": "pretty ombres",
+      "review_desc": "I wish the amount of yarn was larger. I crochet for our local senior center and can only get one item out of this skein.",
+      "category": "yarn_reviews"
+    },
+    {
+      "id": 166,
+      "product": "Lion Brand Re-Spun Thick & Quick Yarn",
+      "review_title": "",
+      "review_desc": "",
+      "category": "yarn_reviews"
+    }
   ]
 }
