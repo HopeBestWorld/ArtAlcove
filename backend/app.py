@@ -147,6 +147,10 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     weaving_reviews_df = pd.DataFrame(data['weaving_reviews'])
     yarn_df = pd.DataFrame(data['yarn'])
     yarn_reviews_df = pd.DataFrame(data['yarn_reviews'])
+    knitting_df = pd.DataFrame(data['knitting'])
+    knitting_reviews_df = pd.DataFrame(data['knitting_reviews'])
+    pottery_df = pd.DataFrame(data['pottery'])
+    pottery_reviews_df = pd.DataFrame(data['pottery_reviews'])
 
     merged_df = pd.concat([
         pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
@@ -176,7 +180,10 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
         pd.merge(ceramic_df, ceramic_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(beads_df, beads_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(weaving_df, weaving_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(yarn_df, yarn_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(yarn_df, yarn_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(knitting_df, knitting_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(pottery_df, pottery_reviews_df, left_on='product', right_on='product', how='inner')
+
 
     ])
 
@@ -276,6 +283,10 @@ def json_search(query):
     merged_df2 = pd.merge(weaving_df, weaving_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
     merged_df2 = pd.merge(yarn_df, yarn_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(knitting_df, knitting_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(pottery_df, pottery_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
 
     matches = merged_df.groupby(
