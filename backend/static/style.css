@@ -262,7 +262,7 @@ html {
 
 .similarity,
 .num {
-  margin-top: 100px;
+  margin-top: 45px;
   color: #378baf;
   font-weight: bold;
 }
@@ -325,54 +325,30 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-.latent-topics-container {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
 .latent-topics-heading {
   font-weight: bold;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   width: 100px;
 }
 
-.latent-topics-container .link {
-  font-size: 0.9em;
-  margin-bottom: 5px;
-}
-
-.latent-topics-hover {
-  visibility: hidden;
-  width: auto;
-  /* Adjust width as needed */
-  background-color: #f0f0f0;
-  /* Light background */
-  color: #333;
-  text-align: left;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  white-space: normal;
-}
-
-.latent-topics-container:hover .latent-topics-hover {
-  visibility: visible;
-}
-
-.latent-topics-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: block;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  max-width: 250px;
 }
 
 .latent-topic-item {
-  padding: 5px 0;
-  font-size: 0.9em;
+  font-size: 12px;
+  padding: 3px;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  display: inline-block;
+  max-width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #e9c5e4;
 }

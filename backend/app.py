@@ -305,9 +305,9 @@ def search_cosine():
 
         product_latent_topics = []
         for i in top_dimension_indices:
-            top_words = get_top_words(components[i])
-            product_latent_topics.append(f"Related to Dimension {i+1}: {', '.join(top_words)}")
-
+            product_latent_topics += (get_top_words(components[i]))
+        product_latent_topics = list(set(product_latent_topics))
+            
         query_lower = query_str.lower()
         product_name = row['product'].lower()
         if product_name in query_lower:

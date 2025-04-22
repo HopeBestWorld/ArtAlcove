@@ -71,16 +71,16 @@
     ) {
       let latentTopicsHTML = "";
       if (latent_topics && latent_topics.length > 0) {
-        latentTopicsHTML +=
-          "<div class='hover-container latent-topics-container'>";
-        latentTopicsHTML += "<p class='latent-topics-heading'>Related:</p>";
-        latentTopicsHTML += "<p class='link'>(See more...)</p>";
-        latentTopicsHTML +=
-          "<div class='hover latent-topics-hover'><ul class='latent-topics-list'>";
+        // latentTopicsHTML +=
+        //   "<div class='hover-container latent-topics-container'>";
+        latentTopicsHTML += `<p class="latent-topics-heading">Related:</p><div class="tags">`;
+        // latentTopicsHTML += "<p class='link'>(See more...)</p>";
+        // latentTopicsHTML +=
+        //   "<div class='hover latent-topics-hover'><ul class='latent-topics-list'>";
         latent_topics.forEach((topic) => {
-          latentTopicsHTML += `<li class='latent-topic-item'>${topic}</li>`;
+          latentTopicsHTML += `<p class='latent-topic-item'>${topic}</p>`;
         });
-        latentTopicsHTML += "</ul></div>";
+        // latentTopicsHTML += "</ul></div>";
         latentTopicsHTML += "</div>";
       }
       return `<div class='card'>
