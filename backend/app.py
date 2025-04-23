@@ -315,11 +315,11 @@ def search_cosine():
     results = []
 
     # Find the top 3 most influential latent dimensions for this query
-    query_dimension_strengths = np.abs(query_vector_reduced_explain)
+    query_dimension_strengths = np.abs(query_vector_reduced_explain[0])
     query_top_dimension_indices = np.argsort(query_dimension_strengths)[::-1][:3]
 
     query_latent_topics = []
-    for index in query_top_dimension_indices[0]: # Corrected loop
+    for index in query_top_dimension_indices:
         query_latent_topics += (get_top_words(components[index]))
     query_latent_topics = list(set(query_latent_topics))
 

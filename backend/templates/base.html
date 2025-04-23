@@ -180,10 +180,8 @@
           } else {
             // Display query latent topics
             if (data.query_latent_topics && data.query_latent_topics.length > 0) {
-              const top5Topics = data.query_latent_topics.slice(0, 5); // Get the first 5 topics
-
               let topicsHTML = "<p class='query-latent-topics-heading'>Related to your search:</p><div class='tags'>";
-              top5Topics.forEach((topic) => {
+              data.query_latent_topics.forEach((topic) => {
                 topicsHTML += `<p class='latent-topic-item'>${topic}</p>`;
               });
               topicsHTML += "</div>";
