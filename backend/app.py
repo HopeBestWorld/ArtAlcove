@@ -203,25 +203,6 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     merged_df['review_desc_str'] = merged_df['review_desc'].apply(lambda x: ' '.join(x))
     merged_df['combined'] = merged_df['descr'] * DESCR_WEIGHT + " " + merged_df['product'] * PRODUCT_WEIGHT + " " + merged_df['review_title_str'] * REVIEW_TITLE_WEIGHT + " " + merged_df['review_desc_str'] * REVIEW_DESC_WEIGHT    
     tfidf_matrix = vectorizer.fit_transform(merged_df['combined'])
-    print(tfidf_matrix.shape)
-    # shape is currently (719, 1000)
-    # 719 documents (rows) — so dataset has 719 entries
-    # 1000 features (columns) — the top 1000 most frequent terms (words)
-
-    # Apply SVD
-    n_components = 392  # n_components must be less than 1000 (number of features) 
-    svd = TruncatedSVD(n_components=n_components)
-    X_reduced = svd.fit_transform(tfidf_matrix.toarray())
-    print(f"Explained variance ratio: {svd.explained_variance_ratio_.sum():.2f}")
-
-    svd_full = TruncatedSVD(n_components=719)
-    svd_full.fit(tfidf_matrix)
-
-    explained = np.cumsum(svd_full.explained_variance_ratio_)
-    optimal_components = np.searchsorted(explained, 0.95) + 1
-
-    print(f"Number of components to retain 95% variance: {optimal_components}")
-    # currently is 392
 
 app = Flask(__name__)
 CORS(app)
@@ -311,8 +292,8 @@ def search_cosine():
         isSet = True
 
     if not query_str:
-        return json.dumps([])
-    
+        return json.dumps({"results": [], "query_latent_topics": []}) # Return empty list if no query
+
     query_vector = vectorizer.transform([query_str])
 
     # Apply SVD with a smaller number of components for interpretability
@@ -332,6 +313,16 @@ def search_cosine():
         return [feature_names[index] for index in sorted_word_indices[:n]]
 
     results = []
+
+    # Find the top 3 most influential latent dimensions for this query
+    query_dimension_strengths = np.abs(query_vector_reduced_explain)
+    query_top_dimension_indices = np.argsort(query_dimension_strengths)[::-1][:3]
+
+    query_latent_topics = []
+    for index in query_top_dimension_indices[0]: # Corrected loop
+        query_latent_topics += (get_top_words(components[index]))
+    query_latent_topics = list(set(query_latent_topics))
+
     for index, product_vector_reduced in enumerate(tfidf_matrix_reduced_explain):
         row = merged_df.iloc[index]
         similarity = max(0, 0, get_sim(query_vector_reduced_explain, product_vector_reduced))
@@ -341,10 +332,10 @@ def search_cosine():
         top_dimension_indices = np.argsort(product_dimension_strengths)[::-1][:3]
 
         product_latent_topics = []
-        for i in top_dimension_indices:
-            product_latent_topics += (get_top_words(components[i]))
+        for idx in top_dimension_indices: # Changed variable name to avoid shadowing
+            product_latent_topics += (get_top_words(components[idx]))
         product_latent_topics = list(set(product_latent_topics))
-            
+
         query_lower = query_str.lower()
         product_name = row['product'].lower()
         if product_name in query_lower:
@@ -360,7 +351,7 @@ def search_cosine():
                 'review_desc': row['review_desc'],
                 'category_x': row['category_x'],
                 'similarity': 1.0,
-                'latent_topics': product_latent_topics 
+                'latent_topics': product_latent_topics
             })
         elif similarity > 0:
             results.append({
@@ -375,14 +366,14 @@ def search_cosine():
                 'review_desc': row['review_desc'],
                 'category_x': row['category_x'],
                 'similarity': float(similarity.item()),
-                'latent_topics': product_latent_topics 
+                'latent_topics': product_latent_topics
             })
 
     results = get_new_price(results, isSet)
     results.sort(key=lambda x: x['similarity'], reverse=True)
     results = filter_price(query_str, results)
     results = multiple_categories(results)
-    return json.dumps(results)
+    return json.dumps({"results": results, "query_latent_topics": query_latent_topics})
 
 if 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5001)

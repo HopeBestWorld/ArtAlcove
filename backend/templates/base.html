@@ -3,19 +3,15 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
+  rel="stylesheet" />
 
 <body>
   <div class="full-body-container">
     <div id="top-text" class="top-text">
       <div class="row">
         <div class="col1">
-          <img
-            src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}"
-          />
+          <img src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}" />
         </div>
         <div class="col2">
           <h1>Working on an art project?</h1>
@@ -25,24 +21,22 @@
           </h2>
         </div>
       </div>
-      <div class="input-box" onclick="sendFocus()">
-        <img src="{{ url_for('static', filename='images/mag.png') }}" />
-        <input
-          placeholder="Enter your query here..."
-          id="filter-text-val"
-          onkeyup="if (event.key === 'Enter') handleSearch()"
-        />
+      <div class="input-box-container">
+        <div class="input-box" onclick="sendFocus()">
+          <img src="{{ url_for('static', filename='images/mag.png') }}" />
+          <input placeholder="Enter your query here..." id="filter-text-val"
+            onkeyup="if (event.key === 'Enter') handleSearch()" />
+        </div>
+        <div id="query-latent-topics" class="query-latent-topics"></div>
       </div>
     </div>
-    <div
-      style="
+    <div style="
         margin-top: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
         margin-left: 400px;
-      "
-    >
+      ">
       <span id="unit" class="unit bold">Unit Price</span>
       <label class="toggle">
         <input type="checkbox" id="toggleButton" />
@@ -71,16 +65,10 @@
     ) {
       let latentTopicsHTML = "";
       if (latent_topics && latent_topics.length > 0) {
-        // latentTopicsHTML +=
-        //   "<div class='hover-container latent-topics-container'>";
         latentTopicsHTML += `<p class="latent-topics-heading">Related:</p><div class="tags">`;
-        // latentTopicsHTML += "<p class='link'>(See more...)</p>";
-        // latentTopicsHTML +=
-        //   "<div class='hover latent-topics-hover'><ul class='latent-topics-list'>";
         latent_topics.forEach((topic) => {
           latentTopicsHTML += `<p class='latent-topic-item'>${topic}</p>`;
         });
-        // latentTopicsHTML += "</ul></div>";
         latentTopicsHTML += "</div>";
       }
       return `<div class='card'>
@@ -156,37 +144,55 @@
         if (this.checked) {
           set.classList.add("bold");
           unit.classList.remove("bold");
-          //unit search
+          handleSearch();
         } else {
           set.classList.remove("bold");
           unit.classList.add("bold");
-          //set search
+          handleSearch();
         }
-        handleSearch();
       });
 
     function handleSearch() {
       document.getElementById("answer-box").innerHTML = "";
       document.getElementById("loading-indicator").style.display = "block";
+      const queryLatentTopicsDiv = document.getElementById("query-latent-topics");
+      queryLatentTopicsDiv.innerHTML = ""; // Clear previous query topics
 
       const isSet = document.getElementById("toggleButton").checked;
+      const query = document.getElementById("filter-text-val").value;
 
       fetch(
         "/search_cosine?" +
-          new URLSearchParams({
-            query: document.getElementById("filter-text-val").value,
-            toggle: isSet ? "set" : "unit",
-          }).toString()
+        new URLSearchParams({
+          query: query,
+          toggle: isSet ? "set" : "unit",
+        }).toString()
       )
         .then((response) => response.json())
         .then((data) => {
           const answerBox = document.getElementById("answer-box");
           answerBox.innerHTML = "";
-          if (data.length === 0) {
+
+          if (data.results.length === 0) {
             answerBox.innerHTML =
               "<div class='no-match'><h2>No matches found</h2></div>";
+            queryLatentTopicsDiv.innerHTML = ""; // Clear topics if no results
           } else {
-            data.forEach((row) => {
+            // Display query latent topics
+            if (data.query_latent_topics && data.query_latent_topics.length > 0) {
+              const top5Topics = data.query_latent_topics.slice(0, 5); // Get the first 5 topics
+
+              let topicsHTML = "<p class='query-latent-topics-heading'>Related to your search:</p><div class='tags'>";
+              top5Topics.forEach((topic) => {
+                topicsHTML += `<p class='latent-topic-item'>${topic}</p>`;
+              });
+              topicsHTML += "</div>";
+              queryLatentTopicsDiv.innerHTML = topicsHTML;
+            } else {
+              queryLatentTopicsDiv.innerHTML = ""; // Clear if no query topics
+            }
+
+            data.results.forEach((row) => {
               let tempDiv = document.createElement("div");
               tempDiv.innerHTML = answerBoxTemplate(
                 row.product,
