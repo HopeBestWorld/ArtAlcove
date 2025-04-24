@@ -29,7 +29,6 @@ def build_vectorizer(max_features, stop_words, max_df=0.8, min_df=10, norm='l2')
     TfidfVectorizer
         A TfidfVectorizer object with the given parameters as its preprocessing properties.
     """
-    # TODO-5.1
     tfidf_vectorizer = TfidfVectorizer(
         max_features=max_features,
         stop_words=stop_words,
@@ -49,3 +48,46 @@ def get_sim(vector1, vector2): # Changed parameter names
         return 0.0
     else:
         return n / d
+    
+def edit_distance(
+    query: str, message: str, ins_cost_func: int, del_cost_func: int, sub_cost_func: int
+) -> int:
+    """Finds the edit distance between a query and a message using the edit matrix
+
+    Arguments
+    =========
+    query: query string,
+
+    message: message string,
+
+    ins_cost_func: function that returns the cost of inserting a letter,
+
+    del_cost_func: function that returns the cost of deleting a letter,
+
+    sub_cost_func: function that returns the cost of substituting a letter,
+
+    Returns:
+        edit cost (int)
+    """
+
+    query = query.lower()
+    message = message.lower()
+
+    m, n = len(query), len(message)
+    dp = np.zeros((m+1, n+1), dtype=float)
+
+
+    for i in range(1, m+1):
+        dp[i][0] = dp[i-1][0] + del_cost_func(query, i)  
+    for j in range(1, n+1):
+        dp[0][j] = dp[0][j-1] + ins_cost_func(message, j)
+
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            insertion = dp[i][j-1] + ins_cost_func(message, j)
+            deletion = dp[i-1][j] + del_cost_func(query, i)
+            substitution = dp[i-1][j-1] + sub_cost_func(query, message, i, j)
+            
+            dp[i][j] = min(insertion, deletion, substitution)
+
+    return dp[m][n]

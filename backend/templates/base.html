@@ -174,8 +174,16 @@
           answerBox.innerHTML = "";
 
           if (data.results.length === 0) {
-            answerBox.innerHTML =
-              "<div class='no-match'><h2>No matches found</h2></div>";
+            let suggestionsHTML = "<div class='no-match'><h2>No matches found</h2>";
+            if (data.suggestions && data.suggestions.length > 0) {
+              suggestionsHTML += "<p>Perhaps you meant:</p><ul>";
+              data.suggestions.forEach(suggestion => {
+                suggestionsHTML += `<li>${suggestion}</li>`;
+              });
+              suggestionsHTML += "</ul>";
+            }
+            suggestionsHTML += "</div>";
+            answerBox.innerHTML = suggestionsHTML;
             queryLatentTopicsDiv.innerHTML = ""; // Clear topics if no results
           } else {
             // Display query latent topics

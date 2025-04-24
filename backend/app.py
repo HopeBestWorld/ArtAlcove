@@ -5,7 +5,7 @@ import re
 from flask import Flask, render_template, request
 from flask_cors import CORS
 import pandas as pd
-from analysis_a5 import build_vectorizer, get_sim
+from analysis import build_vectorizer, get_sim
 import numpy as np
 from numpy import linalg as LA
 from sklearn.decomposition import TruncatedSVD
@@ -13,7 +13,7 @@ from sklearn.decomposition import TruncatedSVD
 
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 
-from analysis_a5 import build_vectorizer, get_sim
+from analysis import build_vectorizer, get_sim, edit_distance
 from tfidf import query
 
 # ROOT_PATH for linking with all your files.
@@ -87,6 +87,20 @@ def multiple_categories(results):
         top += category_groups[cat][:3]
         remaining += category_groups[cat][3:]
     return (top + remaining + lowest)[:20]
+
+def insertion_cost(message, j):
+    return 1
+
+
+def deletion_cost(query, i):
+    return 1
+
+
+def substitution_cost(query, message, i, j):
+    if query[i - 1] == message[j - 1]:
+        return 0
+    else:
+        return 1
 
 # Assuming your JSON data is stored in a file named 'init.json'
 with open(json_file_path, 'r', encoding='utf-8') as file:
@@ -292,7 +306,7 @@ def search_cosine():
         isSet = True
 
     if not query_str:
-        return json.dumps({"results": [], "query_latent_topics": []}) # Return empty list if no query
+        return json.dumps({"results": [], "query_latent_topics": [], "suggestions": []})
 
     query_vector = vectorizer.transform([query_str])
 
@@ -301,7 +315,6 @@ def search_cosine():
     svd_explain = TruncatedSVD(n_components=n_components_explain)
     tfidf_matrix_reduced_explain = svd_explain.fit_transform(tfidf_matrix)
     query_vector_reduced_explain = svd_explain.transform(query_vector)
-
 
     # Get the vocabulary
     feature_names = vectorizer.get_feature_names_out()
@@ -332,7 +345,7 @@ def search_cosine():
         top_dimension_indices = np.argsort(product_dimension_strengths)[::-1][:3]
 
         product_latent_topics = []
-        for idx in top_dimension_indices: # Changed variable name to avoid shadowing
+        for idx in top_dimension_indices:
             product_latent_topics += (get_top_words(components[idx]))
         product_latent_topics = list(set(product_latent_topics))
 
@@ -373,7 +386,19 @@ def search_cosine():
     results.sort(key=lambda x: x['similarity'], reverse=True)
     results = filter_price(query_str, results)
     results = multiple_categories(results)
-    return json.dumps({"results": results, "query_latent_topics": query_latent_topics})
+
+    suggestions = []
+    if not results:
+        all_products = merged_df['product'].unique().tolist()
+        suggestion_distances = []
+        for product in all_products:
+            distance = edit_distance(query_str, product, insertion_cost, deletion_cost, substitution_cost)
+            suggestion_distances.append((distance, product))
+
+        suggestion_distances.sort(key=lambda item: item[0])
+        suggestions = [product for distance, product in suggestion_distances[:5]] # Get top 5 suggestions
+
+    return json.dumps({"results": results, "query_latent_topics": query_latent_topics, "suggestions": suggestions})
 
 if 'DB_NAME' not in os.environ:
     app.run(debug=True, host="0.0.0.0", port=5001)
