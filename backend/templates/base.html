@@ -3,15 +3,19 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
-  rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat&family=Open+Sans:wght@500&display=swap"
+  rel="stylesheet"
+/>
 
 <body>
   <div class="full-body-container">
     <div id="top-text" class="top-text">
       <div class="row">
         <div class="col1">
-          <img src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}" />
+          <img
+            src="{{ url_for('static', filename='images/ArtAlcove logo 1.png') }}"
+          />
         </div>
         <div class="col2">
           <h1>Working on an art project?</h1>
@@ -24,19 +28,24 @@
       <div class="input-box-container">
         <div class="input-box" onclick="sendFocus()">
           <img src="{{ url_for('static', filename='images/mag.png') }}" />
-          <input placeholder="Enter your query here..." id="filter-text-val"
-            onkeyup="if (event.key === 'Enter') handleSearch()" />
+          <input
+            placeholder="Enter your query here..."
+            id="filter-text-val"
+            onkeyup="if (event.key === 'Enter') handleSearch()"
+          />
         </div>
         <div id="query-latent-topics" class="query-latent-topics"></div>
       </div>
     </div>
-    <div style="
+    <div
+      style="
         margin-top: 10px;
         display: flex;
         align-items: center;
         gap: 10px;
         margin-left: 400px;
-      ">
+      "
+    >
       <span id="unit" class="unit bold">Unit Price</span>
       <label class="toggle">
         <input type="checkbox" id="toggleButton" />
@@ -74,7 +83,7 @@
       return `<div class='card'>
                 <h3>${product}</h3>
                 <div class='two-col'>
-                    <p class='link'><a href="${siteurl}">Shop here</p></a>
+                    <p class='link'><a href="${siteurl}" target="_blank">Shop here</p></a>
                     <p class='price'>$${price.toFixed(2)}</p>
                 </div>
                 <div class='two-col'>
@@ -155,7 +164,9 @@
     function handleSearch() {
       document.getElementById("answer-box").innerHTML = "";
       document.getElementById("loading-indicator").style.display = "block";
-      const queryLatentTopicsDiv = document.getElementById("query-latent-topics");
+      const queryLatentTopicsDiv = document.getElementById(
+        "query-latent-topics"
+      );
       queryLatentTopicsDiv.innerHTML = ""; // Clear previous query topics
 
       const isSet = document.getElementById("toggleButton").checked;
@@ -163,10 +174,10 @@
 
       fetch(
         "/search_cosine?" +
-        new URLSearchParams({
-          query: query,
-          toggle: isSet ? "set" : "unit",
-        }).toString()
+          new URLSearchParams({
+            query: query,
+            toggle: isSet ? "set" : "unit",
+          }).toString()
       )
         .then((response) => response.json())
         .then((data) => {
@@ -187,8 +198,12 @@
             queryLatentTopicsDiv.innerHTML = ""; // Clear topics if no results
           } else {
             // Display query latent topics
-            if (data.query_latent_topics && data.query_latent_topics.length > 0) {
-              let topicsHTML = "<p class='query-latent-topics-heading'>Related to your search:</p><div class='tags'>";
+            if (
+              data.query_latent_topics &&
+              data.query_latent_topics.length > 0
+            ) {
+              let topicsHTML =
+                "<p class='query-latent-topics-heading'>Related to your search:</p><div class='tags2'>";
               data.query_latent_topics.forEach((topic) => {
                 topicsHTML += `<p class='latent-topic-item'>${topic}</p>`;
               });
