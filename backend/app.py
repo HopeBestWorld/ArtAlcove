@@ -167,6 +167,9 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
     pottery_reviews_df = pd.DataFrame(data['pottery_reviews'])
     wood_df = pd.DataFrame(data['wood'])
     wood_reviews_df = pd.DataFrame(data['wood_reviews'])
+    felting_df = pd.DataFrame(data['felting'])
+    felting_reviews_df = pd.DataFrame(data['felting_reviews'])
+    
 
     merged_df = pd.concat([
         pd.merge(stretched_canvas_df, stretched_canvas_reviews_df, left_on='product', right_on='product', how='inner'),
@@ -199,7 +202,8 @@ with open(json_file_path, 'r', encoding='utf-8') as file:
         pd.merge(yarn_df, yarn_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(knitting_df, knitting_reviews_df, left_on='product', right_on='product', how='inner'),
         pd.merge(pottery_df, pottery_reviews_df, left_on='product', right_on='product', how='inner'),
-        pd.merge(wood_df, wood_reviews_df, left_on='product', right_on='product', how='inner')
+        pd.merge(wood_df, wood_reviews_df, left_on='product', right_on='product', how='inner'),
+        pd.merge(felting_df, felting_reviews_df, left_on='product', right_on='product', how='inner')
 
 
 
@@ -288,6 +292,8 @@ def json_search(query):
     merged_df2 = pd.merge(pottery_df, pottery_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
     merged_df2 = pd.merge(wood_df, wood_reviews_df, left_on='product', right_on='product', how='inner')
+    merged_df = pd.concat([merged_df, merged_df2])
+    merged_df2 = pd.merge(felting_df, felting_reviews_df, left_on='product', right_on='product', how='inner')
     merged_df = pd.concat([merged_df, merged_df2])
 
     matches = merged_df.groupby(
